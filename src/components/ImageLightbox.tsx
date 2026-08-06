@@ -10,18 +10,18 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ image, onClose }) 
   if (!image) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-8 animate-fadeIn">
+    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-8">
       {/* Top Bar */}
-      <div className="flex justify-between items-center text-[#e8e1dd] z-10 max-w-7xl mx-auto w-full">
+      <div className="flex justify-between items-center text-white z-10 max-w-7xl mx-auto w-full">
         <div>
-          <span className="font-sans text-xs uppercase tracking-widest text-[#d1bfa5]">Punto Cero Patagonia</span>
-          <h3 className="font-serif text-2xl text-[#e8e1dd]">{image.title}</h3>
+          <span className="font-sans text-[11px] uppercase tracking-widest text-zinc-400">Punto Cero Patagonia</span>
+          <h3 className="font-sans text-xl font-light text-white">{image.title}</h3>
         </div>
         <button
           onClick={onClose}
-          className="p-3 bg-[#221f1c] border border-[#4c463d] rounded-full text-[#e8e1dd] hover:bg-[#d1bfa5] hover:text-[#5a4d39] transition-colors cursor-pointer"
+          className="p-2.5 bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-600 transition-colors cursor-pointer"
         >
-          <X size={24} />
+          <X size={20} />
         </button>
       </div>
 
@@ -30,13 +30,13 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ image, onClose }) 
         <img
           src={image.src}
           alt={image.title}
-          className="max-h-[75vh] max-w-full object-contain shadow-2xl rounded-sm border border-[#4c463d]/30"
+          className="max-h-[75vh] max-w-full object-contain shadow-2xl border border-zinc-800"
         />
       </div>
 
       {/* Bottom Description */}
       <div className="max-w-3xl mx-auto text-center z-10 pb-4">
-        <p className="text-[#cfc5ba] text-base font-light leading-relaxed">
+        <p className="text-zinc-400 text-sm font-light leading-relaxed">
           {image.desc}
         </p>
       </div>

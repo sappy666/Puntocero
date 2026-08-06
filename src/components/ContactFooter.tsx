@@ -34,43 +34,43 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
   };
 
   return (
-    <footer id="contact" className="bg-[#1e1b19] border-t border-[#4c463d]/30 text-[#e8e1dd] py-24 px-6 sm:px-12 md:px-16">
+    <footer id="contact" className="bg-[#0c0c0e] border-t border-zinc-800 text-zinc-300 py-28 sm:py-36 px-6 sm:px-12 md:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Column: Direct Contact Info */}
-          <div className="md:col-span-5 space-y-8">
+          <div className="md:col-span-5 space-y-6">
             <div>
               <div className="mb-6">
                 <Logo />
               </div>
-              <h2 className="font-serif text-4xl sm:text-5xl text-[#e8e1dd] mb-4">
+              <h2 className="font-sans text-3xl sm:text-4xl font-light text-white mb-3 tracking-tight">
                 {c.title}
               </h2>
-              <p className="text-[#cfc5ba] text-base font-light max-w-sm mb-8 leading-relaxed">
+              <p className="text-zinc-400 text-sm font-light max-w-sm mb-6 leading-relaxed">
                 {c.subtitle}
               </p>
 
-              <div className="space-y-4 pt-2">
+              <div className="space-y-3 pt-1">
                 <a
                   href={`tel:${c.phone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-4 group w-fit hover:translate-x-1 transition-transform duration-300"
+                  className="flex items-center gap-3 group w-fit transition-colors duration-200"
                 >
-                  <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
-                    <Phone size={18} className="text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors" />
+                  <div className="p-2 bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors">
+                    <Phone size={16} className="text-zinc-400 group-hover:text-white transition-colors" />
                   </div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
+                  <span className="font-sans text-xs uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors">
                     {c.phone}
                   </span>
                 </a>
 
                 <a
                   href={`mailto:${c.email}`}
-                  className="flex items-center gap-4 group w-fit hover:translate-x-1 transition-transform duration-300"
+                  className="flex items-center gap-3 group w-fit transition-colors duration-200"
                 >
-                  <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
-                    <Mail size={18} className="text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors" />
+                  <div className="p-2 bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors">
+                    <Mail size={16} className="text-zinc-400 group-hover:text-white transition-colors" />
                   </div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
+                  <span className="font-sans text-xs uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors">
                     {c.email}
                   </span>
                 </a>
@@ -81,16 +81,16 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
           {/* Right Column: Contact Form */}
           <div className="md:col-span-7 lg:col-span-6 lg:col-start-7">
             {submitted && (
-              <div className="mb-6 p-4 bg-[#d1bfa5]/10 border border-[#d1bfa5]/40 text-[#d1bfa5] flex items-center gap-3 font-sans text-xs uppercase tracking-wide rounded-sm animate-fadeIn">
-                <CheckCircle size={20} />
+              <div className="mb-6 p-4 bg-zinc-800/80 border border-zinc-700 text-white flex items-center gap-3 font-sans text-xs uppercase tracking-wide">
+                <CheckCircle size={18} />
                 <span>{c.form.success}</span>
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
-              <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+              <div className="border-b border-zinc-700 pb-2 focus-within:border-white transition-colors duration-200">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-zinc-400">
                   {c.form.name}
                 </label>
                 <input
@@ -99,13 +99,13 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder={c.form.namePlaceholder}
-                  className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-base placeholder-[#cfc5ba]/40 focus:outline-none"
+                  className="w-full bg-transparent border-none p-0 focus:ring-0 text-white font-sans text-sm placeholder-zinc-600 focus:outline-none"
                 />
               </div>
 
               {/* Email */}
-              <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+              <div className="border-b border-zinc-700 pb-2 focus-within:border-white transition-colors duration-200">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-zinc-400">
                   {c.form.email}
                 </label>
                 <input
@@ -114,13 +114,13 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={c.form.emailPlaceholder}
-                  className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-base placeholder-[#cfc5ba]/40 focus:outline-none"
+                  className="w-full bg-transparent border-none p-0 focus:ring-0 text-white font-sans text-sm placeholder-zinc-600 focus:outline-none"
                 />
               </div>
 
               {/* Message */}
-              <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+              <div className="border-b border-zinc-700 pb-2 focus-within:border-white transition-colors duration-200">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-zinc-400">
                   {c.form.message}
                 </label>
                 <textarea
@@ -129,14 +129,14 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={c.form.messagePlaceholder}
-                  className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-base placeholder-[#cfc5ba]/40 resize-none focus:outline-none"
+                  className="w-full bg-transparent border-none p-0 focus:ring-0 text-white font-sans text-sm placeholder-zinc-600 resize-none focus:outline-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#d1bfa5] text-[#5a4d39] px-8 py-4 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 cursor-pointer disabled:opacity-50"
+                className="bg-zinc-100 text-zinc-950 px-6 py-3.5 font-sans text-xs uppercase tracking-widest font-medium hover:bg-white transition-all duration-200 cursor-pointer disabled:opacity-50"
               >
                 {isSubmitting ? c.form.sending : c.form.send}
               </button>
@@ -145,23 +145,23 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
         </div>
 
         {/* Bottom Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-16 border-t border-[#4c463d]/30 mt-20">
-          <div className="flex flex-wrap gap-6 font-sans text-xs uppercase tracking-widest text-[#cfc5ba]">
-            <a href="#" className="hover:text-[#d1bfa5] transition-colors duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 border-t border-zinc-800 mt-16">
+          <div className="flex flex-wrap gap-6 font-sans text-xs uppercase tracking-widest text-zinc-400">
+            <a href="#" className="hover:text-white transition-colors duration-200">
               {f.privacy}
             </a>
-            <a href="#" className="hover:text-[#d1bfa5] transition-colors duration-300">
+            <a href="#" className="hover:text-white transition-colors duration-200">
               {f.terms}
             </a>
-            <a href="#" className="hover:text-[#d1bfa5] transition-colors duration-300">
+            <a href="#" className="hover:text-white transition-colors duration-200">
               {f.sustainability}
             </a>
           </div>
 
-          <div className="text-left md:text-right text-[#cfc5ba] text-xs font-light space-y-1">
+          <div className="text-left md:text-right text-zinc-400 text-xs font-light space-y-1">
             <p>{f.copyright}</p>
-            <p className="font-sans text-[11px] text-[#a89f91]">
-              Arquitectura: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-[#d1bfa5] underline underline-offset-2 hover:text-white transition-colors">Tomás Villalón</a> &bull; Fotografía: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-[#d1bfa5] underline underline-offset-2 hover:text-white transition-colors">Roland Halbe</a>
+            <p className="font-sans text-[11px] text-zinc-500">
+              Arquitectura: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-zinc-300 underline underline-offset-2 hover:text-white transition-colors">Tomás Villalón</a> &bull; Fotografía: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-zinc-300 underline underline-offset-2 hover:text-white transition-colors">Roland Halbe</a>
             </p>
           </div>
         </div>

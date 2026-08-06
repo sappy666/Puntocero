@@ -14,19 +14,19 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
   const t = translations[lang].architecturalRetreat;
 
   return (
-    <section className="py-24 sm:py-32 px-6 sm:px-12 md:px-16 bg-[#1a1714] border-t border-[#4c463d]/30 relative overflow-hidden">
+    <section className="py-28 sm:py-40 md:py-48 px-6 sm:px-12 md:px-20 bg-[#0c0c0e] border-t border-zinc-800 relative overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#4c463d]/30 pb-8 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-800 pb-8 gap-6">
           <div>
-            <span className="font-sans text-xs uppercase tracking-[0.22em] text-[#d1bfa5] block mb-2 font-medium">
+            <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 block mb-3 font-medium">
               {t.tag}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#e8e1dd] tracking-tight">
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
               {t.title}
             </h2>
-            <p className="font-sans text-sm text-[#a89f91] mt-1 font-light tracking-wide">
+            <p className="font-sans text-base text-zinc-400 mt-2 font-light tracking-wide">
               {t.subtitle}
             </p>
           </div>
@@ -36,92 +36,92 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
             href={t.portfolioUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-5 py-3 border border-[#4c463d]/60 bg-[#151310]/60 hover:bg-[#151310] hover:border-[#d1bfa5] text-[#d1bfa5] hover:text-white transition-all duration-300 text-xs font-sans uppercase tracking-widest rounded-sm self-start md:self-end group"
+            className="inline-flex items-center gap-2.5 px-5 py-3 border border-zinc-700 bg-zinc-900/60 hover:bg-zinc-800 hover:border-zinc-500 text-zinc-300 hover:text-white transition-all duration-200 text-xs font-sans uppercase tracking-widest self-start md:self-end group"
           >
             <span>{t.portfolioLabel}</span>
-            <ExternalLink size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            <ExternalLink size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
           </a>
         </div>
 
-        {/* Photo Gallery Grid - Focus on Photography */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        {/* Photo Gallery Grid - Larger Photos */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
           {/* Main Large Photo */}
-          <div className="md:col-span-7 relative group rounded-sm overflow-hidden border border-[#4c463d]/40 shadow-xl min-h-[380px] sm:min-h-[480px]">
+          <div className="md:col-span-7 relative group overflow-hidden border border-zinc-800 min-h-[480px] sm:min-h-[580px] lg:min-h-[660px]">
             <img
               src={mainExtPhoto}
               alt="Casa Bahía Murta por Tomás Villalón"
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100"
+              className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#151310]/90 via-transparent to-transparent" />
-            <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between text-xs text-[#e8e1dd]/90 font-sans tracking-wider">
-              <span className="flex items-center gap-1.5 uppercase">
-                <Compass size={13} className="text-[#d1bfa5]" /> Exterior en Madera de Lenga
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/90 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs text-zinc-300 font-sans tracking-wider">
+              <span className="flex items-center gap-2 uppercase text-[11px] text-zinc-300">
+                <Compass size={14} className="text-zinc-400" /> Exterior en Madera de Lenga
               </span>
-              <span className="text-[#a89f91] text-[11px]">Fotografía: Roland Halbe</span>
+              <span className="text-zinc-400 text-[11px]">Fotografía: Roland Halbe</span>
             </div>
           </div>
 
           {/* Dual Staggered Photos */}
-          <div className="md:col-span-5 grid grid-rows-2 gap-6">
-            <div className="relative group rounded-sm overflow-hidden border border-[#4c463d]/40 shadow-lg min-h-[220px]">
+          <div className="md:col-span-5 grid grid-rows-2 gap-8">
+            <div className="relative group overflow-hidden border border-zinc-800 min-h-[280px] sm:min-h-[310px]">
               <img
                 src={livingPhoto}
                 alt="Living interior Casa Bahía Murta"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100"
+                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#151310]/80 via-transparent to-transparent" />
-              <span className="absolute bottom-4 left-4 text-xs font-sans text-[#e8e1dd] tracking-wider uppercase">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/80 via-transparent to-transparent" />
+              <span className="absolute bottom-6 left-6 text-[11px] font-sans text-zinc-300 tracking-wider uppercase">
                 Espacios Interiores & Ventanales
               </span>
             </div>
 
-            <div className="relative group rounded-sm overflow-hidden border border-[#4c463d]/40 shadow-lg min-h-[220px]">
+            <div className="relative group overflow-hidden border border-zinc-800 min-h-[280px] sm:min-h-[310px]">
               <img
                 src={bedroomPhoto}
                 alt="Dormitorio con vistas al Lago General Carrera"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100"
+                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#151310]/80 via-transparent to-transparent" />
-              <span className="absolute bottom-4 left-4 text-xs font-sans text-[#e8e1dd] tracking-wider uppercase">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/80 via-transparent to-transparent" />
+              <span className="absolute bottom-6 left-6 text-[11px] font-sans text-zinc-300 tracking-wider uppercase">
                 Integración con la Pendiente del Terreno
               </span>
             </div>
           </div>
         </div>
 
-        {/* Subtle Architectural Narrative & Spec Sheet */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-4 items-start">
-          <div className="lg:col-span-7 space-y-4 text-[#cfc5ba] text-sm sm:text-base font-light leading-relaxed">
+        {/* Minimal Narrative & Spec Sheet */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-2 items-start">
+          <div className="lg:col-span-7 space-y-4 text-zinc-300 text-sm font-light leading-relaxed">
             <p>{t.p1}</p>
             <p>{t.p2}</p>
           </div>
 
           {/* Technical Spec Sheet */}
-          <div className="lg:col-span-5 bg-[#151310]/80 border border-[#4c463d]/40 p-6 rounded-sm space-y-4">
-            <h3 className="font-sans text-xs uppercase tracking-[0.2em] text-[#d1bfa5] font-semibold border-b border-[#4c463d]/30 pb-3">
+          <div className="lg:col-span-5 bg-zinc-900/40 border border-zinc-800 p-6 space-y-4">
+            <h3 className="font-sans text-xs uppercase tracking-[0.2em] text-zinc-300 font-medium border-b border-zinc-800 pb-3">
               Ficha Técnica
             </h3>
             <div className="grid grid-cols-2 gap-4 text-xs">
               {t.specs.map((spec, idx) => (
                 <div key={idx} className="space-y-1">
-                  <span className="block font-sans uppercase text-[#a89f91] text-[10px] tracking-widest">
+                  <span className="block font-sans uppercase text-zinc-400 text-[10px] tracking-widest">
                     {spec.label}
                   </span>
-                  <span className="block font-sans text-[#e8e1dd] font-medium">
+                  <span className="block font-sans text-zinc-200 font-normal">
                     {spec.value}
                   </span>
                 </div>
               ))}
             </div>
-            <div className="pt-2 border-t border-[#4c463d]/30">
+            <div className="pt-2 border-t border-zinc-800">
               <a
                 href={t.portfolioUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-sans text-[#d1bfa5] hover:text-white transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-xs font-sans text-zinc-300 hover:text-white transition-colors duration-200"
               >
                 <span>Ver reportaje fotográfico completo en Roland Halbe</span>
                 <ExternalLink size={12} />

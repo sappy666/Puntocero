@@ -10,75 +10,46 @@ export const OriginPause: React.FC<OriginPauseProps> = ({ lang }) => {
   const t = translations[lang].originPause;
 
   return (
-    <section className="py-20 sm:py-28 px-6 bg-[#12100e] relative overflow-hidden border-t border-b border-[#4c463d]/30 text-center select-none">
-      {/* Background radial glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[500px] h-[250px] bg-[#d1bfa5]/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
-        {/* Animated Compass Icon / Emblem */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="mb-6"
-        >
-          <div className="relative inline-flex items-center justify-center p-3 rounded-full border border-[#d1bfa5]/30 bg-[#181512]/80 backdrop-blur-sm shadow-xl">
-            <svg
-              viewBox="0 0 100 100"
-              className="h-8 w-8 text-[#d1bfa5] animate-pulse"
-              fill="currentColor"
-            >
-              <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="4.5" />
-              <circle cx="50" cy="50" r="5" fill="currentColor" />
-              <polygon points="50,5 42,25 58,25" fill="currentColor" />
-              <polygon points="50,95 42,75 58,75" fill="currentColor" />
-              <polygon points="5,50 25,42 25,58" fill="currentColor" />
-              <polygon points="95,50 75,42 75,58" fill="currentColor" />
-            </svg>
-          </div>
-        </motion.div>
-
-        {/* Top Decorative Line */}
+    <section className="py-24 sm:py-36 px-6 sm:px-12 bg-[#0c0c0e] relative border-t border-b border-zinc-800 text-center select-none">
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
+        {/* Minimalist Top Line */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#d1bfa5]/60 to-transparent mb-6"
+          transition={{ duration: 0.8 }}
+          className="w-20 h-[1px] bg-zinc-700 mb-8"
         />
 
         {/* Animated Main Phrase */}
         <motion.h2
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#d1bfa5] tracking-[0.2em] uppercase font-light mb-4"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="font-sans text-3xl sm:text-4xl md:text-5xl text-zinc-100 tracking-[0.25em] uppercase font-extralight mb-6"
         >
           {t.title}
         </motion.h2>
 
         {/* Animated Subtitle / Rest Phrase */}
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-serif italic text-base sm:text-lg md:text-xl text-[#cfc5ba] max-w-2xl font-light leading-relaxed"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="font-sans text-base sm:text-lg text-zinc-400 max-w-2xl font-light leading-relaxed tracking-wide"
         >
-          "{t.subtitle}"
+          {t.subtitle}
         </motion.p>
 
-        {/* Bottom Decorative Line */}
+        {/* Minimalist Bottom Line */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#d1bfa5]/60 to-transparent mt-8"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-20 h-[1px] bg-zinc-700 mt-8"
         />
       </div>
     </section>

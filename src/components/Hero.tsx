@@ -19,54 +19,59 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
   };
 
   return (
-    <header className="relative w-full min-h-screen pt-28 md:pt-36 pb-20 px-6 sm:px-12 md:px-16 flex items-end zoom-parallax">
-      {/* Background Image with Gradient Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-1000 ease-out"
-        style={{
-          backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuASbR5EYy_4r3BvSM7-7YyaagCXDZc2UpsQiHBrO_HWK_TcU0vz9gz3i5kcaDahcVQvu_UQ0sKVDYvmkVZBNDqgJkCWZ9vL2lz1pTqbYTstVO6_TxHGaTqk6a6OalRKNH0bxkfkFinKJcdf9l7IRaIZTFilxiz0SQnr3arOh3mh0gmg88ASULmfnA8CLEM_YUfGNLMRUBpvK2HrtjIYQud3dQtDmnCFF5VcLK-s-fAnCld39lTkx62AWfK3SRe_Udiyxw')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-[#151310] via-[#151310]/40 to-black/30" />
+    <header className="relative w-full min-h-screen pt-32 md:pt-44 pb-28 sm:pb-36 px-6 sm:px-12 md:px-20 flex items-end">
+      {/* Background Ambient Video Loop with Gradient Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://lh3.googleusercontent.com/aida-public/AB6AXuASbR5EYy_4r3BvSM7-7YyaagCXDZc2UpsQiHBrO_HWK_TcU0vz9gz3i5kcaDahcVQvu_UQ0sKVDYvmkVZBNDqgJkCWZ9vL2lz1pTqbYTstVO6_TxHGaTqk6a6OalRKNH0bxkfkFinKJcdf9l7IRaIZTFilxiz0SQnr3arOh3mh0gmg88ASULmfnA8CLEM_YUfGNLMRUBpvK2HrtjIYQud3dQtDmnCFF5VcLK-s-fAnCld39lTkx62AWfK3SRe_Udiyxw"
+          className="w-full h-full object-cover scale-100"
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-mountain-lake-and-snow-capped-peaks-in-patagonia-41582-large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-[#0c0c0e]/60 to-black/50" />
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 w-full items-end">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full items-end">
         {/* Left Column: Title & Quote */}
-        <div className="md:col-span-8 text-[#e8e1dd] space-y-6">
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-none text-white drop-shadow-sm">
+        <div className="lg:col-span-8 text-zinc-100 space-y-8">
+          <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-tight leading-[0.95] text-white">
             {t.title}
           </h1>
 
-          <div className="max-w-xl space-y-3">
-            <p className="text-lg sm:text-xl text-[#e8e1dd]/90 font-light leading-relaxed">
+          <div className="max-w-2xl space-y-4">
+            <p className="text-xl sm:text-2xl text-zinc-300 font-light leading-relaxed">
               {t.subtitle}
             </p>
-            <p className="font-serif italic text-2xl sm:text-3xl text-[#d1bfa5] pt-2">
+            <p className="font-sans text-xl sm:text-2xl text-zinc-400 font-light pt-2 tracking-wide">
               {t.tagline}
             </p>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-6">
             <a
               href="#features"
-              className="group inline-flex items-center gap-3 border-b border-[#d1bfa5] text-[#d1bfa5] pb-1 font-sans text-xs uppercase tracking-widest hover:opacity-90 hover:text-white hover:border-white transition-all duration-300"
+              className="group inline-flex items-center gap-4 border-b border-zinc-500 text-zinc-300 pb-1.5 font-sans text-xs uppercase tracking-[0.2em] hover:text-white hover:border-white transition-all duration-200"
             >
               <span>{t.discoverMore}</span>
-              <ArrowDown size={14} className="group-hover:translate-y-1 transition-transform duration-300" />
+              <ArrowDown size={14} className="group-hover:translate-y-1 transition-transform duration-200" />
             </a>
           </div>
         </div>
 
         {/* Right Column: Reservation Form Overlay Card */}
-        <div className="md:col-span-4 bg-[#221f1c]/90 backdrop-blur-md p-8 border border-[#4c463d]/40 shadow-2xl rounded-sm hover:border-[#d1bfa5]/60 hover:shadow-[#d1bfa5]/10 transition-all duration-500">
-          <h2 className="font-serif text-3xl text-[#e8e1dd] mb-6 border-b border-[#4c463d]/30 pb-3">
+        <div className="lg:col-span-4 bg-[#121215]/90 backdrop-blur-md p-8 sm:p-10 border border-zinc-800 shadow-2xl rounded-none">
+          <h2 className="font-sans text-2xl font-light text-white mb-6 border-b border-zinc-800 pb-3 uppercase tracking-wider">
             {t.reservationTitle}
           </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Check-in */}
-            <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-              <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+            <div className="border-b border-zinc-700 pb-2 focus-within:border-white transition-colors duration-200">
+              <label className="block font-sans text-[11px] uppercase tracking-wider mb-1 text-zinc-400">
                 {t.checkIn}
               </label>
               <input
@@ -74,13 +79,13 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
                 required
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none cursor-pointer"
+                className="w-full bg-transparent border-none p-0 focus:ring-0 text-white font-sans text-sm focus:outline-none cursor-pointer"
               />
             </div>
 
             {/* Check-out */}
-            <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-              <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+            <div className="border-b border-zinc-700 pb-2 focus-within:border-white transition-colors duration-200">
+              <label className="block font-sans text-[11px] uppercase tracking-wider mb-1 text-zinc-400">
                 {t.checkOut}
               </label>
               <input
@@ -88,22 +93,22 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
                 required
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none cursor-pointer"
+                className="w-full bg-transparent border-none p-0 focus:ring-0 text-white font-sans text-sm focus:outline-none cursor-pointer"
               />
             </div>
 
             {/* Guests Selector */}
-            <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-              <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+            <div className="border-b border-zinc-700 pb-2 focus-within:border-white transition-colors duration-200">
+              <label className="block font-sans text-[11px] uppercase tracking-wider mb-1 text-zinc-400">
                 {t.guests}
               </label>
               <select
                 value={guests}
                 onChange={(e) => setGuests(Number(e.target.value))}
-                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none cursor-pointer"
+                className="w-full bg-transparent border-none p-0 focus:ring-0 text-white font-sans text-sm focus:outline-none cursor-pointer"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
-                  <option key={num} value={num} className="bg-[#221f1c] text-[#e8e1dd]">
+                  <option key={num} value={num} className="bg-[#121215] text-white">
                     {num} {num === 1 ? 'Huésped' : 'Huéspedes'}
                   </option>
                 ))}
@@ -112,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
 
             <button
               type="submit"
-              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 shadow-md cursor-pointer"
+              className="w-full bg-zinc-100 text-zinc-950 py-3.5 font-sans text-xs uppercase tracking-widest font-medium hover:bg-white transition-all duration-200 cursor-pointer"
             >
               {t.checkAvailability}
             </button>

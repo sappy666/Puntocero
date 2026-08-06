@@ -24,8 +24,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b bg-[#151310]/95 backdrop-blur-md border-[#4c463d]/40 shadow-xl ${
-        isScrolled ? 'py-3.5 shadow-2xl bg-[#151310]/98' : 'py-4'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b bg-[#0c0c0e]/90 backdrop-blur-md border-zinc-800/80 ${
+        isScrolled ? 'py-3 bg-[#0c0c0e]/95' : 'py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center">
@@ -39,34 +39,34 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
         </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-[#cfc5ba] font-sans text-xs uppercase tracking-widest">
+        <div className="hidden md:flex items-center gap-8 text-zinc-400 font-sans text-xs uppercase tracking-widest font-normal">
           <a
             href="#features"
-            className="hover:text-[#d1bfa5] transition-colors duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#d1bfa5] hover:after:w-full after:transition-all after:duration-300"
+            className="hover:text-white transition-colors duration-200 relative py-1"
           >
             {t.features}
           </a>
           <a
             href="#gallery"
-            className="hover:text-[#d1bfa5] transition-colors duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#d1bfa5] hover:after:w-full after:transition-all after:duration-300"
+            className="hover:text-white transition-colors duration-200 relative py-1"
           >
             {t.gallery}
           </a>
           <a
             href="#attractions"
-            className="hover:text-[#d1bfa5] transition-colors duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#d1bfa5] hover:after:w-full after:transition-all after:duration-300"
+            className="hover:text-white transition-colors duration-200 relative py-1"
           >
             {t.attractions}
           </a>
           <a
             href="#map"
-            className="hover:text-[#d1bfa5] transition-colors duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#d1bfa5] hover:after:w-full after:transition-all after:duration-300"
+            className="hover:text-white transition-colors duration-200 relative py-1"
           >
             {t.map}
           </a>
           <a
             href="#contact"
-            className="hover:text-[#d1bfa5] transition-colors duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#d1bfa5] hover:after:w-full after:transition-all after:duration-300"
+            className="hover:text-white transition-colors duration-200 relative py-1"
           >
             {t.contact}
           </a>
@@ -74,17 +74,17 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Right CTA & Language Selector */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-2 text-[#cfc5ba] font-sans text-xs tracking-widest">
+          <div className="flex items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">
             {(['es', 'en', 'por'] as const).map((l) => {
               const active = lang === l;
               return (
                 <button
                   key={l}
                   onClick={() => setLang(l)}
-                  className={`px-2 py-1 rounded-sm border transition-all duration-300 font-sans text-xs uppercase tracking-widest cursor-pointer ${
+                  className={`px-2 py-1 border transition-all duration-200 font-sans text-xs uppercase tracking-widest cursor-pointer ${
                     active
-                      ? 'border-[#d1bfa5] text-[#d1bfa5] font-semibold bg-[#d1bfa5]/10 shadow-sm'
-                      : 'border-transparent text-[#cfc5ba] hover:border-[#d1bfa5] hover:text-[#e8e1dd] hover:bg-[#d1bfa5]/5'
+                      ? 'border-zinc-500 text-white font-medium bg-zinc-800/60'
+                      : 'border-transparent text-zinc-400 hover:text-white'
                   }`}
                 >
                   {l}
@@ -95,7 +95,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
           <button
             onClick={onOpenBooking}
-            className="bg-[#d1bfa5] text-[#5a4d39] px-6 py-3 font-sans text-xs uppercase tracking-widest font-medium hover:bg-[#383431] hover:text-[#e8e1dd] transition-all duration-500 transform hover:scale-[0.98] shadow-md cursor-pointer"
+            className="bg-zinc-100 text-zinc-950 px-5 py-2.5 font-sans text-xs uppercase tracking-widest font-medium hover:bg-white transition-all duration-200 cursor-pointer"
           >
             {t.bookNow}
           </button>
@@ -103,17 +103,17 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Mobile Hamburger Toggle */}
         <div className="flex md:hidden items-center gap-3">
-          <div className="flex items-center gap-1.5 text-[#cfc5ba] font-sans text-xs tracking-widest mr-1">
+          <div className="flex items-center gap-1 text-zinc-400 font-sans text-xs tracking-widest mr-1">
             {(['es', 'en', 'por'] as const).map((l) => {
               const active = lang === l;
               return (
                 <button
                   key={l}
                   onClick={() => setLang(l)}
-                  className={`px-1.5 py-0.5 rounded-sm border transition-all duration-300 font-sans text-[11px] uppercase tracking-wider cursor-pointer ${
+                  className={`px-1.5 py-0.5 border transition-all duration-200 font-sans text-[11px] uppercase tracking-wider cursor-pointer ${
                     active
-                      ? 'border-[#d1bfa5] text-[#d1bfa5] font-semibold bg-[#d1bfa5]/10'
-                      : 'border-transparent text-[#cfc5ba] hover:border-[#d1bfa5] hover:text-[#e8e1dd]'
+                      ? 'border-zinc-500 text-white font-medium bg-zinc-800/60'
+                      : 'border-transparent text-zinc-400 hover:text-white'
                   }`}
                 >
                   {l}
@@ -123,49 +123,49 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
           </div>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-[#e8e1dd] p-2 focus:outline-none"
+            className="text-zinc-200 p-2 focus:outline-none"
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#1e1b19] border-b border-[#4c463d]/40 px-6 py-6 space-y-4 font-sans text-xs uppercase tracking-widest animate-fadeIn">
+        <div className="md:hidden bg-[#121215] border-b border-zinc-800 px-6 py-6 space-y-4 font-sans text-xs uppercase tracking-widest">
           <a
             href="#features"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#e8e1dd] hover:text-[#d1bfa5]"
+            className="block py-2 text-zinc-200 hover:text-white"
           >
             {t.features}
           </a>
           <a
             href="#gallery"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#e8e1dd] hover:text-[#d1bfa5]"
+            className="block py-2 text-zinc-200 hover:text-white"
           >
             {t.gallery}
           </a>
           <a
             href="#attractions"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#e8e1dd] hover:text-[#d1bfa5]"
+            className="block py-2 text-zinc-200 hover:text-white"
           >
             {t.attractions}
           </a>
           <a
             href="#map"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#e8e1dd] hover:text-[#d1bfa5]"
+            className="block py-2 text-zinc-200 hover:text-white"
           >
             {t.map}
           </a>
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#e8e1dd] hover:text-[#d1bfa5]"
+            className="block py-2 text-zinc-200 hover:text-white"
           >
             {t.contact}
           </a>
@@ -174,7 +174,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
               setMobileMenuOpen(false);
               onOpenBooking();
             }}
-            className="w-full mt-4 bg-[#d1bfa5] text-[#5a4d39] py-3 font-sans text-xs uppercase tracking-widest font-semibold text-center"
+            className="w-full mt-4 bg-zinc-100 text-zinc-950 py-3 font-sans text-xs uppercase tracking-widest font-medium text-center"
           >
             {t.bookNow}
           </button>

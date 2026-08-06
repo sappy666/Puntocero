@@ -42,7 +42,7 @@ export const Logo: React.FC<LogoProps> = ({
           PUNTO CERO
         </span>
         {showSubtitle && (
-          <span className="font-sans font-normal text-[8.5px] sm:text-[9.5px] tracking-[0.22em] text-[#d1bfa5] uppercase mt-1">
+          <span className="font-sans font-normal text-[8.5px] sm:text-[9.5px] tracking-[0.22em] text-zinc-400 uppercase mt-1">
             {subtitle}
           </span>
         )}
