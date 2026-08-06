@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Manifesto } from './components/Manifesto';
+import { OriginPause } from './components/OriginPause';
+import { ArchitecturalRetreat } from './components/ArchitecturalRetreat';
 import { Amenities } from './components/Amenities';
 import { SpacesGallery } from './components/SpacesGallery';
 import { Attractions } from './components/Attractions';
@@ -53,6 +55,12 @@ export default function App() {
 
       {/* Manifesto / Features Section */}
       <Manifesto lang={lang} />
+
+      {/* Volver al Origen Visual Rest Break */}
+      <OriginPause lang={lang} />
+
+      {/* Architectural Retreat Section */}
+      <ArchitecturalRetreat lang={lang} />
 
       {/* Amenities Grid */}
       <Amenities lang={lang} />

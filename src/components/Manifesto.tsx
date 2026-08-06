@@ -12,12 +12,17 @@ export const Manifesto: React.FC<ManifestoProps> = ({ lang }) => {
     <section id="features" className="py-24 sm:py-32 px-6 sm:px-12 md:px-16 bg-[#151310]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center border-t border-[#4c463d]/30 pt-16">
         {/* Text Story Column */}
-        <div className="md:col-span-6 lg:col-span-5 space-y-8">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-[#e8e1dd]">
-            {t.title}
-          </h2>
-          <div className="space-y-6 text-[#cfc5ba] text-base sm:text-lg font-light leading-relaxed">
-            <p className="font-medium text-[#e8e1dd]/90">{t.p1}</p>
+        <div className="md:col-span-6 lg:col-span-6 space-y-6">
+          <div>
+            <span className="font-sans text-xs uppercase tracking-[0.22em] text-[#d1bfa5] block mb-2 font-medium">
+              {t.title}
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl leading-snug text-[#e8e1dd]">
+              {t.lead}
+            </h2>
+          </div>
+          <div className="space-y-4 text-[#cfc5ba] text-sm sm:text-base font-light leading-relaxed">
+            <p>{t.p1}</p>
             <p>{t.p2}</p>
             <p>{t.p3}</p>
           </div>
