@@ -23,10 +23,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
-        isScrolled
-          ? 'bg-[#151310]/90 backdrop-blur-md border-[#4c463d]/30 py-4 shadow-xl'
-          : 'bg-gradient-to-b from-[#151310]/80 to-transparent border-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b bg-[#151310]/95 backdrop-blur-md border-[#4c463d]/40 shadow-xl ${
+        isScrolled ? 'py-3.5 shadow-2xl bg-[#151310]/98' : 'py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center">
