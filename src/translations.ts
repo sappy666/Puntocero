@@ -1,4 +1,4 @@
-export type Language = 'es' | 'en';
+export type Language = 'es' | 'en' | 'por';
 
 export const translations = {
   es: {
@@ -233,4 +233,121 @@ export const translations = {
       guestsLabel: 'Number of Guests',
     }
   },
+  por: {
+    nav: {
+      brand: 'Punto Cero Patagonia',
+      features: 'Características',
+      gallery: 'Galeria',
+      attractions: 'Atrações',
+      map: 'Mapa',
+      contact: 'Contato',
+      bookNow: 'RESERVAR AGORA',
+    },
+    hero: {
+      title: 'Bahía Murta Retreat',
+      subtitle: 'Aqui, a arquitetura não compete com a paisagem. Ela se torna parte dela.',
+      tagline: 'Voltar à Origem.',
+      discoverMore: 'DESCUBRA MAIS',
+      reservationTitle: 'Reservar',
+      checkIn: 'CHECK-IN',
+      checkOut: 'CHECK-OUT',
+      guests: 'HÓSPEDES',
+      checkAvailability: 'VERIFICAR DISPONIBILIDADE',
+    },
+    manifesto: {
+      title: 'Arquitetura que transforma o que você sente.',
+      p1: 'Inspirado pela imensidão da Patagônia. Criado para quem busca algo mais profundo.',
+      p2: 'Punto Cero é uma coleção de refúgios arquitetônicos criados para reconectar as pessoas com o que verdadeiramente importa. Oculto nas paisagens intocadas do sul do Chile, cada refúgio é pensado para existir em harmonia com a natureza.',
+      p3: 'Mais do que um destino, Punto Cero é um convite para desacelerar, reconectar e redescubrir a beleza da simplicidade.',
+    },
+    amenities: {
+      title: 'O Refúgio',
+      subtitle: 'Conforto absoluto no fim do mundo.',
+      items: [
+        { icon: 'group', label: 'ATÉ 10 HÓSPEDES' },
+        { icon: 'bed', label: '7 CAMAS' },
+        { icon: 'shower', label: '4 BANHEIROS COMPLETOS' },
+        { icon: 'kitchen', label: 'COZINHA EQUIPADA' },
+        { icon: 'fireplace', label: 'LAREIRA A LENHA' },
+        { icon: 'wifi', label: 'ESPAÇO DE TRABAJO' },
+      ],
+    },
+    spaces: {
+      title: 'Espaços',
+      tag: '03 // GALERIA VISUAL',
+      items: [
+        {
+          id: 'exterior',
+          name: 'Exterior',
+          desc: 'A estrutura repousa com respeito sobre o terreno, oferecendo vistas ininterruptas da natureza circundante.',
+          image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDJeZBRPfHfk-mnP3TueilqDDBs9l7P08C2nyTxXXXWzsOGxjfqBSVHMDpHwhu7CvjVhoIyJopvdSDTorPVoEWqeh53BB4-OnKhjkYFf7BrnXy7mY_n54zMWZ5pHaOaibZx53CoXxpYQlv1Vz4RwApchQ8acTh6S7gC6nv2iP1F78jTKVG8vHQkUmHLfLOxH2SH2uF2G43ijwv5FxoViInIlralqVl5Pn0b67Fe5WbYi0vbIXrGLCM0r6bx12KEHviR4A',
+        },
+        {
+          id: 'dormitorios',
+          name: 'Quartos',
+          desc: 'Espaços projetados para um descanso profundo, onde a luz da manhã e os materiais nobres são os protagonistas.',
+          image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9TetUkLuviha5uqx3pNoi2YGO8h6w_6cJWV7Sx-zQ8E4etSfMULvABMdKaGwBlwtFIldb82hWqo_5q0Vr2Kb7nvucAaptdR3fAgTvRMeeLFCebxu-6okEXCDQP7AEbTAqSJFAtvTJrAs5IJEY7JK11GvqX7Ue6uPOUcU6QEoP2S6xa8drZOE8ivmsjHz6MhKnOQR3YAh5UTO0vgZYv90XIfwjwyToplZsnV5JDA-IhFyIn1lfpmaQriC7LuKMjTUW7Q',
+        },
+        {
+          id: 'banos',
+          name: 'Banheiros',
+          desc: 'Santuários privados com acabamentos puros, pensados para o relaxamento após um dia de exploração.',
+          image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-dfEqDJswpL2uYVBYq1_mUiA7qvzgdDIdQGRXpIaa9f6ZtuMI9yCXCMnRHpAOvny0HW6YrpBT6nAOWb16xd-HLvQRCTnAt9REQn-YL7b2QwopQ8__n2HMcOZte1KsPOScLXLCtY9-7XWkoL9hrtaNIXYAf5cs_sHpAj_lK5E_0xteyC-i-tQwlUzTiwkmhHYSBIte8Yd8Vv4_8_bMEH1MmUxmS2HKPTv2ilExoO4mJsPsMLP7LTcSzFbjrnGWpFPkeg',
+        },
+        {
+          id: 'cocina',
+          name: 'Cozinha & Sala',
+          desc: 'O coração do refúgio. Um espaço aberto onde a convivência flui em direção ao panorama patagônico.',
+          image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBERrGGMMfAP3vxvQz4Lf2fxGyHg94o_8ZvirKA0wI5x2-3pJS6lerJu0o_8SakRIZIu1LIUXEM9Iso5GFDvOU554scdZqKq3QYPv7qAkfUMyOOR5hQCK47hiqqfSTMPaBwY8D4tXulAnEEQvi-LIC5gl3YmXAEzanxbMwCmz81XVFWM0YtMJ3ZaZ-AIGZhFM1qY7xOvp4Mjg-QrI5vzLmCA1P5D8PcWYB_lTWEKy4t_v7mh74I8uvIE2o0Bk_c5AT07g',
+        },
+      ],
+    },
+    attractions: {
+      tag: 'REDONDEZAS',
+      title: 'Parque Nacional Patagonia',
+      distance: 'A 240 KM DE DISTÂNCIA',
+      desc: 'O Parque Nacional Patagonia combina estepes infinitas, florestas milenares e lagos turquesa sob picos glaciais. Observe côndores, flamingos, pumas e huemules enquanto percorre trilhas épicas ou se maravilha com o silêncio absoluto do fim do mundo.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBb7qCnDhzFoKQEDJx05s3x317vkAT4E2hFOKWU5tZTpQnjUxfcJqMYNrrxm4W8H8FgecmRuqToPRQe--NEZVri8zfSPGvNHSZin5paSa_xC88wM3mJzTYJMVWTLJpwzbs_V4hZjd30xawUwgdxcyfYfjiXk7tycSRFrRqzThYlVyXqs707njiCpVJNCquyfVuVoYgAr4EZML0Rx_RWdlHak1_Rv_js6XM3sZsSlEC2sVvn-iXroAlOyW_vP_dQHOR_bg',
+    },
+    location: {
+      title: 'Localização',
+      address: 'Bahía Murta, Região de Aysén, Chile.',
+      openMaps: 'ABRIR NO MAPS',
+      mapImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBtJYTsfcaGFI6iBsEddaSnIAoiBVbf4AwUj_TuDvyoFk-nhbiGljIfYhe70UHAITfV1TjHhJ1fkaodAMxbqd3FMt8_pIyWio4fNjZrQsKyslnDRL2we_YbH-xRpASRRp27cpS0cr6aw8AuSPxsdw69kGZwXEwjurHTgRB9r6_UhMzvJMWLGR32b1cgHOEx9x9uyew84V1RUBI64khvL1huwfiScz-sTptNm-XJq9enosLE-vw1R0w2',
+    },
+    contact: {
+      title: 'Fale Conosco',
+      subtitle: 'Para informações e reservas, entre em contato através dos nossos canais oficiais.',
+      phone: '+56 9 8720 9748',
+      email: 'contacto@patagoniapartners.cl',
+      form: {
+        name: 'NOME',
+        namePlaceholder: 'Seu nome',
+        email: 'E-MAIL',
+        emailPlaceholder: 'email@exemplo.com',
+        message: 'MENSAGEM',
+        messagePlaceholder: 'Como podemos ajudar?',
+        send: 'ENVIAR MENSAGEM',
+        sending: 'ENVIANDO...',
+        success: 'Mensagem enviada com sucesso! Entraremos em contato em breve.',
+      },
+    },
+    footer: {
+      privacy: 'Política de Privacidade',
+      terms: 'Termos de Serviço',
+      sustainability: 'Sustentabilidade',
+      copyright: '© 2024 Punto Cero Patagonia.',
+      sub: 'Voltar à Origem.',
+    },
+    modal: {
+      bookingTitle: 'Reserva no Bahía Murta Retreat',
+      confirmBooking: 'Confirmar Solicitação de Reserva',
+      nightlyRate: '$450 USD / noite',
+      totalEstimated: 'Total Estimado',
+      successMessage: 'Solicitação recebida! Entraremos em contato em breve para finalizar a confirmação.',
+      close: 'Fechar',
+      guestsLabel: 'Número de Hóspedes',
+    }
+  },
 };
+

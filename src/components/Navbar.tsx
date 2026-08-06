@@ -74,7 +74,16 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Right CTA & Language Selector */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-2 text-[#cfc5ba] font-mono text-xs tracking-widest">
+          <div className="flex items-center gap-1.5 text-[#cfc5ba] font-mono text-xs tracking-widest">
+            <button
+              onClick={() => setLang('es')}
+              className={`transition-colors duration-300 ${
+                lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'hover:text-[#e8e1dd]'
+              }`}
+            >
+              ES
+            </button>
+            <span className="text-[#4c463d]">|</span>
             <button
               onClick={() => setLang('en')}
               className={`transition-colors duration-300 ${
@@ -85,12 +94,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
             </button>
             <span className="text-[#4c463d]">|</span>
             <button
-              onClick={() => setLang('es')}
+              onClick={() => setLang('por')}
               className={`transition-colors duration-300 ${
-                lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'hover:text-[#e8e1dd]'
+                lang === 'por' ? 'text-[#d1bfa5] font-semibold' : 'hover:text-[#e8e1dd]'
               }`}
             >
-              ES
+              POR
             </button>
           </div>
 
@@ -103,8 +112,15 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
         </div>
 
         {/* Mobile Hamburger Toggle */}
-        <div className="flex md:hidden items-center gap-4">
-          <div className="flex items-center gap-2 text-[#cfc5ba] font-mono text-xs tracking-widest mr-2">
+        <div className="flex md:hidden items-center gap-3">
+          <div className="flex items-center gap-1 text-[#cfc5ba] font-mono text-xs tracking-widest mr-1">
+            <button
+              onClick={() => setLang('es')}
+              className={lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
+            >
+              ES
+            </button>
+            <span>|</span>
             <button
               onClick={() => setLang('en')}
               className={lang === 'en' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
@@ -113,10 +129,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
             </button>
             <span>|</span>
             <button
-              onClick={() => setLang('es')}
-              className={lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
+              onClick={() => setLang('por')}
+              className={lang === 'por' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
             >
-              ES
+              POR
             </button>
           </div>
           <button
