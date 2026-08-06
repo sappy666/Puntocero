@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Language, translations } from '../translations';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   lang: Language;
@@ -31,9 +32,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
         {/* Brand Logo */}
         <a
           href="#"
-          className="font-serif text-2xl sm:text-3xl tracking-tight text-[#e8e1dd] hover:text-[#d1bfa5] transition-colors duration-300"
+          className="hover:opacity-90 transition-opacity duration-300 py-1"
+          aria-label="Punto Cero Patagonia"
         >
-          {t.brand}
+          <Logo />
         </a>
 
         {/* Desktop Navigation Links */}

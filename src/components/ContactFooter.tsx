@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, CheckCircle } from 'lucide-react';
 import { Language, translations } from '../translations';
+import { Logo } from './Logo';
 
 interface ContactFooterProps {
   lang: Language;
@@ -39,6 +40,9 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
           {/* Left Column: Direct Contact Info */}
           <div className="md:col-span-5 space-y-8">
             <div>
+              <div className="mb-6">
+                <Logo />
+              </div>
               <h2 className="font-serif text-4xl sm:text-5xl text-[#e8e1dd] mb-4">
                 {c.title}
               </h2>
