@@ -13,7 +13,7 @@ export const CompactGallery: React.FC<CompactGalleryProps> = ({ lang, onSelectIm
 
   if (!t.galleryPhotos || t.galleryPhotos.length === 0) return null;
 
-  const categoriesKeys = ['all', 'exterior', 'dormitorios', 'banos', 'interiores', 'entorno'];
+  const categoriesKeys = ['all', ...Object.keys(t.categories || {})];
 
   const getCategoryLabel = (key: string) => {
     if (key === 'all') return t.filterAll || 'TODAS';

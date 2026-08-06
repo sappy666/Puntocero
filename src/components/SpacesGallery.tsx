@@ -15,13 +15,20 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
     <section id="gallery" className="py-24 sm:py-32 px-6 sm:px-12 md:px-16 bg-[#151310]">
       <div className="max-w-7xl mx-auto">
         {/* Header Bar */}
-        <header className="mb-20 border-b border-[#4c463d]/30 pb-8 flex justify-between items-end">
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#e8e1dd]">
-            {t.title}
-          </h2>
-          <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] hidden md:block">
-            {t.tag}
-          </span>
+        <header className="mb-20 border-b border-[#4c463d]/30 pb-8">
+          <div className="flex justify-between items-end mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#e8e1dd]">
+              {t.title}
+            </h2>
+            <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] hidden md:block">
+              {t.tag}
+            </span>
+          </div>
+          {t.subtitle && (
+            <p className="text-[#cfc5ba] text-base font-light max-w-3xl leading-relaxed">
+              {t.subtitle}
+            </p>
+          )}
         </header>
 
         {/* Spaces List */}
@@ -61,21 +68,12 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
 
                 {/* Text Column */}
                 <div className={`md:col-span-4 space-y-4 ${isEven ? 'md:order-2' : 'md:order-1'}`}>
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#d1bfa5] hover:text-white transition-colors duration-300">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#d1bfa5]">
                     {space.name}
                   </h3>
                   <p className="text-[#cfc5ba] text-base font-light leading-relaxed">
                     {space.desc}
                   </p>
-                  <button
-                    onClick={() =>
-                      onSelectImage({ src: space.image, title: space.name, desc: space.desc })
-                    }
-                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#e8e1dd] border-b border-[#4c463d] pb-1 hover:border-[#d1bfa5] hover:text-[#d1bfa5] transition-all duration-300 pt-2 cursor-pointer"
-                  >
-                    <span>Ver Imagen Completa</span>
-                    <Maximize2 size={12} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
-                  </button>
                 </div>
               </div>
             );
