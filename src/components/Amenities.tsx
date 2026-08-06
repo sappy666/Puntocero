@@ -42,16 +42,18 @@ export const Amenities: React.FC<AmenitiesProps> = ({ lang }) => {
         </div>
 
         {/* Right Column: 6 Amenity Items */}
-        <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-8">
+        <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-6">
           {t.items.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-4 group hover:translate-x-1 transition-transform duration-300"
+              className="flex flex-col gap-4 p-5 bg-[#221f1c]/60 border border-[#4c463d]/30 rounded-sm group hover:border-[#d1bfa5]/60 hover:bg-[#282421] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#d1bfa5]/5 transition-all duration-300 cursor-pointer"
             >
-              <div className="p-3 bg-[#221f1c] w-fit border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5]/60 transition-colors duration-300">
-                {getIcon(item.icon)}
+              <div className="p-3 bg-[#181614] w-fit border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
+                <div className="transform group-hover:scale-110 transition-transform duration-300">
+                  {getIcon(item.icon)}
+                </div>
               </div>
-              <span className="font-mono text-xs uppercase tracking-widest text-[#e8e1dd] border-b border-[#4c463d]/30 pb-3 group-hover:border-[#d1bfa5]/80 transition-colors duration-300">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#e8e1dd] group-hover:text-[#d1bfa5] border-b border-[#4c463d]/30 pb-2 group-hover:border-[#d1bfa5] transition-colors duration-300">
                 {item.label}
               </span>
             </div>

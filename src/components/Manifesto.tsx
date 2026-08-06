@@ -24,11 +24,11 @@ export const Manifesto: React.FC<ManifestoProps> = ({ lang }) => {
         </div>
 
         {/* High-res Interior Photo Column */}
-        <div className="md:col-span-6 lg:col-span-6 lg:col-start-7 zoom-parallax rounded-sm shadow-2xl overflow-hidden group">
+        <div className="md:col-span-6 lg:col-span-6 lg:col-start-7 rounded-sm shadow-2xl overflow-hidden border border-[#4c463d]/30 hover:border-[#d1bfa5]/60 hover:shadow-2xl hover:shadow-[#d1bfa5]/10 transition-all duration-700 group cursor-pointer">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFNL1CoMe7J5jBVolakJWVpj3gKj99oREijC7VJek1T2F4oxW9LNcdQSVRDVOR1XzYlnj7DzjwTkz-TU-H5da4KBKPPTfPXPFtWTvsXf_4xC6_PEZ4f7omgDMOcEaqH5a9l3ZpUhhA5jq1A6JEKd7SUOEfFnCIbO9BQV81DVNdjoN0Eov07SoKVlXK7l54YG5B3VYGmt8vo0dAIIXvsfSTz4FT1db9Ixu-qbb2k60gg6JrrdmYw0ZKvlW3cOAkIa7Dow"
             alt="Interior view of Punto Cero Patagonia retreat"
-            className="w-full h-auto aspect-[4/3] object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
+            className="w-full h-auto aspect-[4/3] object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
           />
         </div>
       </div>

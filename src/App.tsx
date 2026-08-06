@@ -6,6 +6,7 @@ import { Amenities } from './components/Amenities';
 import { SpacesGallery } from './components/SpacesGallery';
 import { Attractions } from './components/Attractions';
 import { LocationMap } from './components/LocationMap';
+import { CtaBanner } from './components/CtaBanner';
 import { ContactFooter } from './components/ContactFooter';
 import { BookingModal } from './components/BookingModal';
 import { ImageLightbox } from './components/ImageLightbox';
@@ -67,6 +68,12 @@ export default function App() {
 
       {/* Location Map */}
       <LocationMap lang={lang} />
+
+      {/* Prominent Booking CTA Banner */}
+      <CtaBanner
+        lang={lang}
+        onOpenBooking={() => setIsBookingOpen(true)}
+      />
 
       {/* Contact Form & Footer */}
       <ContactFooter lang={lang} />

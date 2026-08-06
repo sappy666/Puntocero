@@ -49,9 +49,9 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
               <div className="space-y-4 pt-2">
                 <a
                   href={`tel:${c.phone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-4 group w-fit"
+                  className="flex items-center gap-4 group w-fit hover:translate-x-1 transition-transform duration-300"
                 >
-                  <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] transition-colors duration-300">
+                  <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
                     <Phone size={18} className="text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors" />
                   </div>
                   <span className="font-mono text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
@@ -61,9 +61,9 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
 
                 <a
                   href={`mailto:${c.email}`}
-                  className="flex items-center gap-4 group w-fit"
+                  className="flex items-center gap-4 group w-fit hover:translate-x-1 transition-transform duration-300"
                 >
-                  <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] transition-colors duration-300">
+                  <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
                     <Mail size={18} className="text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors" />
                   </div>
                   <span className="font-mono text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
@@ -132,7 +132,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#d1bfa5] text-[#5a4d39] px-8 py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all duration-500 cursor-pointer disabled:opacity-50"
+                className="bg-[#d1bfa5] text-[#5a4d39] px-8 py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 cursor-pointer disabled:opacity-50"
               >
                 {isSubmitting ? c.form.sending : c.form.send}
               </button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Maximize2 } from 'lucide-react';
 import { Language, translations } from '../translations';
+import { CompactGallery } from './CompactGallery';
 
 interface SpacesGalleryProps {
   lang: Language;
@@ -35,7 +36,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
               >
                 {/* Image Column */}
                 <div
-                  className={`md:col-span-8 zoom-parallax rounded-sm shadow-xl relative group cursor-pointer ${
+                  className={`md:col-span-8 rounded-sm shadow-xl relative group cursor-pointer border border-transparent hover:border-[#d1bfa5]/60 hover:shadow-2xl hover:shadow-[#d1bfa5]/10 transition-all duration-700 ${
                     isEven ? 'md:order-1' : 'md:order-2'
                   }`}
                   onClick={() =>
@@ -46,20 +47,21 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
                     <img
                       src={space.image}
                       alt={space.name}
-                      className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700"
+                      className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
                     
                     {/* Hover Lightbox Indicator */}
-                    <div className="absolute top-4 right-4 bg-[#151310]/80 backdrop-blur-md p-2 text-[#d1bfa5] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-sm">
-                      <Maximize2 size={18} />
+                    <div className="absolute top-4 right-4 bg-[#151310]/90 border border-[#4c463d] backdrop-blur-md p-2.5 text-[#d1bfa5] opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 rounded-sm flex items-center gap-2">
+                      <Maximize2 size={16} />
+                      <span className="font-mono text-[10px] uppercase tracking-widest hidden sm:inline">Ampliar</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Text Column */}
                 <div className={`md:col-span-4 space-y-4 ${isEven ? 'md:order-2' : 'md:order-1'}`}>
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#d1bfa5]">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#d1bfa5] hover:text-white transition-colors duration-300">
                     {space.name}
                   </h3>
                   <p className="text-[#cfc5ba] text-base font-light leading-relaxed">
@@ -69,15 +71,19 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
                     onClick={() =>
                       onSelectImage({ src: space.image, title: space.name, desc: space.desc })
                     }
-                    className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#e8e1dd] border-b border-[#4c463d] pb-1 hover:border-[#d1bfa5] hover:text-[#d1bfa5] transition-colors duration-300 pt-2 cursor-pointer"
+                    className="group/btn inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#e8e1dd] border-b border-[#4c463d] pb-1 hover:border-[#d1bfa5] hover:text-[#d1bfa5] transition-all duration-300 pt-2 cursor-pointer"
                   >
                     <span>Ver Imagen Completa</span>
+                    <Maximize2 size={12} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
                   </button>
                 </div>
               </div>
             );
           })}
         </div>
+
+        {/* Compact Photo Gallery Grid for all photos */}
+        <CompactGallery lang={lang} onSelectImage={onSelectImage} />
       </div>
     </section>
   );

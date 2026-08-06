@@ -50,16 +50,16 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
           <div className="pt-4">
             <a
               href="#features"
-              className="inline-flex items-center gap-3 border-b border-[#d1bfa5] text-[#d1bfa5] pb-1 font-mono text-xs uppercase tracking-widest hover:opacity-75 transition-opacity duration-300"
+              className="group inline-flex items-center gap-3 border-b border-[#d1bfa5] text-[#d1bfa5] pb-1 font-mono text-xs uppercase tracking-widest hover:opacity-90 hover:text-white hover:border-white transition-all duration-300"
             >
               <span>{t.discoverMore}</span>
-              <ArrowDown size={14} />
+              <ArrowDown size={14} className="group-hover:translate-y-1 transition-transform duration-300" />
             </a>
           </div>
         </div>
 
         {/* Right Column: Reservation Form Overlay Card */}
-        <div className="md:col-span-4 bg-[#221f1c]/90 backdrop-blur-md p-8 border border-[#4c463d]/40 shadow-2xl rounded-sm">
+        <div className="md:col-span-4 bg-[#221f1c]/90 backdrop-blur-md p-8 border border-[#4c463d]/40 shadow-2xl rounded-sm hover:border-[#d1bfa5]/60 hover:shadow-[#d1bfa5]/10 transition-all duration-500">
           <h2 className="font-serif text-3xl text-[#e8e1dd] mb-6 border-b border-[#4c463d]/30 pb-3">
             {t.reservationTitle}
           </h2>
@@ -74,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
                 required
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none"
+                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none cursor-pointer"
               />
             </div>
 
@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
                 required
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none"
+                className="w-full bg-transparent border-none p-0 focus:ring-0 text-[#e8e1dd] font-sans text-sm focus:outline-none cursor-pointer"
               />
             </div>
 
@@ -112,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
 
             <button
               type="submit"
-              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all duration-500 shadow-md cursor-pointer"
+              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 shadow-md cursor-pointer"
             >
               {t.checkAvailability}
             </button>
