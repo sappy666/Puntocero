@@ -158,9 +158,11 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
             </a>
           </div>
 
-          <div className="text-left md:text-right text-[#cfc5ba] text-sm font-light">
-            {f.copyright} <br />
-            <span className="font-serif italic text-[#d1bfa5]">{f.sub}</span>
+          <div className="text-left md:text-right text-[#cfc5ba] text-xs font-light space-y-1">
+            <p>{f.copyright}</p>
+            <p className="font-sans text-[11px] text-[#a89f91]">
+              Arquitectura: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-[#d1bfa5] underline underline-offset-2 hover:text-white transition-colors">Tomás Villalón</a> &bull; Fotografía: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-[#d1bfa5] underline underline-offset-2 hover:text-white transition-colors">Roland Halbe</a>
+            </p>
           </div>
         </div>
       </div>

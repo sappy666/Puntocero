@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
-  --font-serif: 'EB Garamond', Georgia, serif;
-  --font-mono: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'Plus Jakarta Sans', monospace;
 }
 
 @layer base {
   :root {
-    --font-serif: 'EB Garamond', Georgia, serif;
-    --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
-    --font-mono: 'Hanken Grotesk', system-ui, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'Plus Jakarta Sans', monospace;
   }
 
   body {
@@ -22,6 +22,8 @@
 
   h1, h2, h3, .font-serif-title {
     font-family: var(--font-serif);
+    font-weight: 300;
+    letter-spacing: -0.01em;
   }
 
   .font-label-caps {

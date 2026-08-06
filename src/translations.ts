@@ -34,14 +34,21 @@ export const translations = {
       subtitle: 'Para ir más despacio, respirar profundo y redescubrir la belleza de los momentos más simples de la vida.',
     },
     architecturalRetreat: {
-      tag: 'Refugio Arquitectónico',
-      title: 'Arquitectura que cambia tu forma de sentir.',
-      lead: 'Inspirado por la Patagonia. Diseñado para quienes buscan algo más profundo.',
-      p1: 'Punto Cero es una colección de refugios arquitectónicos creados para reconectar a las personas con lo que verdaderamente importa.',
-      p2: 'Oculto en los paisajes vírgenes de la Patagonia, cada destino está cuidadosamente diseñado para existir en armonía con la naturaleza. Aquí, la arquitectura no compite con el paisaje: se convierte en parte de él.',
-      p3: 'Despierta con vistas infinitas. Explora lugares extraordinarios. Termina tu día bajo uno de los cielos más limpios de la Tierra.',
-      p4: 'En Punto Cero, el lujo se encuentra en el silencio, la arquitectura atemporal y las experiencias significativas que permanecen contigo mucho después de que finaliza tu viaje.',
-      p5: 'Más que un destino, Punto Cero es una invitación a ir más despacio, reconectar y redescubrir la belleza de la simplicidad.',
+      tag: '02 // OBRA ARQUITECTÓNICA',
+      title: 'Casa Bahía Murta',
+      subtitle: 'Diseñada por Tomás Villalón Arquitectos',
+      architectName: 'Tomás Villalón Arquitectos',
+      photographyName: 'Roland Halbe Photography',
+      portfolioUrl: 'https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/',
+      portfolioLabel: 'Ver Publicación y Portfolio de Roland Halbe',
+      p1: 'Construida sobre la pronunciada pendiente de Bahía Murta, frente a la inmensidad del Lago General Carrera, la residencia se concibe como un prisma sobrio de madera de Lenga que flota suavemente sobre el terreno natural.',
+      p2: 'Su volumen abierto se organiza en función de la luz austral y las vistas panorámicas hacia las cumbres y el agua glacial, permitiendo una inmersión contemplativa donde la arquitectura actúa como marco del paisaje.',
+      specs: [
+        { label: 'ARQUITECTURA', value: 'Tomás Villalón' },
+        { label: 'FOTOGRAFÍA', value: 'Roland Halbe' },
+        { label: 'UBICACIÓN', value: 'Bahía Murta, Patagonia, Chile' },
+        { label: 'MATERIALES', value: 'Lenga, Hormigón Visto & Cristal' }
+      ]
     },
     amenities: {
       title: 'El Refugio',
@@ -284,14 +291,21 @@ export const translations = {
       subtitle: 'To slow down, breathe deeply, and rediscover the beauty of life’s simplest moments.',
     },
     architecturalRetreat: {
-      tag: 'Architectural Retreat',
-      title: 'Architecture That Changes the Way You Feel.',
-      lead: 'Inspired by Patagonia. Designed for those seeking something deeper.',
-      p1: 'Punto Cero is a collection of architectural retreats created to reconnect people with what truly matters.',
-      p2: 'Hidden within the untouched landscapes of Patagonia, every destination is thoughtfully designed to exist in harmony with nature. Here, architecture doesn’t compete with the landscape—it becomes part of it.',
-      p3: 'Wake up to endless views. Explore extraordinary places. End your day beneath one of the clearest skies on Earth.',
-      p4: 'At Punto Cero, luxury is found in silence, timeless architecture and meaningful experiences that stay with you long after your journey ends.',
-      p5: 'More than a destination, Punto Cero is an invitation to slow down, reconnect and rediscover the beauty of simplicity.',
+      tag: '02 // ARCHITECTURAL WORK',
+      title: 'Casa Bahía Murta',
+      subtitle: 'Designed by Tomás Villalón Arquitectos',
+      architectName: 'Tomás Villalón Arquitectos',
+      photographyName: 'Roland Halbe Photography',
+      portfolioUrl: 'https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/',
+      portfolioLabel: 'View Publication & Portfolio by Roland Halbe',
+      p1: 'Built along the steep slope of Bahía Murta facing Lake General Carrera, the residence is conceived as a sober Lenga timber prism resting gracefully over the natural topography.',
+      p2: 'Its open volume maximizes southern light and panoramic views of snow-capped peaks and glacial waters, creating a contemplative sanctuary where architecture acts as a refined lens for nature.',
+      specs: [
+        { label: 'ARCHITECTURE', value: 'Tomás Villalón' },
+        { label: 'PHOTOGRAPHY', value: 'Roland Halbe' },
+        { label: 'LOCATION', value: 'Bahía Murta, Patagonia, Chile' },
+        { label: 'MATERIALS', value: 'Native Lenga, Concrete & Glass' }
+      ]
     },
     amenities: {
       title: 'The Sanctuary',
@@ -534,14 +548,21 @@ export const translations = {
       subtitle: 'Para desacelerar, respirar fundo e redescubrir a beleza dos momentos mais simples da vida.',
     },
     architecturalRetreat: {
-      tag: 'Refúgio Arquitetônico',
-      title: 'Arquitetura que transforma o que você sente.',
-      lead: 'Inspirado pela Patagônia. Projetado para quem busca algo mais profundo.',
-      p1: 'Punto Cero é uma coleção de refúgios arquitetônicos criados para reconectar as pessoas com o que verdadeiramente importa.',
-      p2: 'Escondido nas paisagens intocadas da Patagônia, cada destino é cuidadosamente projetado para existir em harmonia com a natureza. Aqui, a arquitetura não compete com a paisagem — torna-se parte dela.',
-      p3: 'Acorde com vistas infinitas. Explore lugares extraordinários. Termine seu dia sob um dos céus mais límpidos da Terra.',
-      p4: 'No Punto Cero, o luxo é encontrado no silêncio, na arquitetura atemporal e em experiências significativas que permanecem com você muito depois do fim da sua viagem.',
-      p5: 'Mais do que um destino, Punto Cero é um convite para desacelerar, reconectar e redescubrir a beleza da simplicidade.',
+      tag: '02 // OBRA ARQUITETÔNICA',
+      title: 'Casa Bahía Murta',
+      subtitle: 'Projetada por Tomás Villalón Arquitectos',
+      architectName: 'Tomás Villalón Arquitectos',
+      photographyName: 'Roland Halbe Photography',
+      portfolioUrl: 'https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/',
+      portfolioLabel: 'Ver Publicação e Portfólio de Roland Halbe',
+      p1: 'Construída sobre a acentuada inclinação de Bahía Murta, em frente ao majestoso Lago General Carrera, a residência se concebe como um prisma sóbrio em madeira de Lenga.',
+      p2: 'Seu volume aberto organiza-se em função da luz austral e das vistas panorâmicas das montanhas e das águas glaciais, permitindo uma imersão contemplativa pura.',
+      specs: [
+        { label: 'ARQUITETURA', value: 'Tomás Villalón' },
+        { label: 'FOTOGRAFIA', value: 'Roland Halbe' },
+        { label: 'LOCALIZAÇÃO', value: 'Bahía Murta, Patagônia, Chile' },
+        { label: 'MATERIAIS', value: 'Madeira de Lenga, Concreto & Vidro' }
+      ]
     },
     amenities: {
       title: 'O Refúgio',
