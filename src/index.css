@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'EB Garamond', Georgia, serif;
+    --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+    --font-mono: 'Space Grotesk', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #151310;
+    color: #e8e1dd;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: var(--font-serif);
+  }
+
+  .font-label-caps {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.fill-icon {
+  font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom image hover zoom transition */
+.zoom-parallax {
+  overflow: hidden;
+}
+
+.zoom-parallax img,
+.zoom-parallax > div {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-parallax:hover img,
+.zoom-parallax:hover > div {
+  transform: scale(1.04);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #151310;
+}
+::-webkit-scrollbar-thumb {
+  background: #383431;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4c463d;
+}

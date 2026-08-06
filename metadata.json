@@ -1,0 +1,6 @@
+{
+  "name": "Punto Cero Patagonia",
+  "description": "Bahía Murta Retreat - Arquitectura que cambia tu forma de sentir en la Patagonia chilena.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
