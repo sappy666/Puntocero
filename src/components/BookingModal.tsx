@@ -75,10 +75,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               {t.successMessage}
             </p>
             <div className="bg-[#1e1b19] p-4 rounded-sm border border-[#4c463d]/30 text-left font-sans text-xs space-y-2 text-[#cfc5ba]">
-              <div><strong className="text-[#d1bfa5]">Llegada:</strong> {checkIn || 'Por confirmar'}</div>
-              <div><strong className="text-[#d1bfa5]">Salida:</strong> {checkOut || 'Por confirmar'}</div>
-              <div><strong className="text-[#d1bfa5]">Huéspedes:</strong> {guests}</div>
-              <div><strong className="text-[#d1bfa5]">Contacto:</strong> {guestName} ({guestEmail})</div>
+              <div><strong className="text-[#d1bfa5]">{t.checkInLabel}:</strong> {checkIn || t.toConfirm}</div>
+              <div><strong className="text-[#d1bfa5]">{t.checkOutLabel}:</strong> {checkOut || t.toConfirm}</div>
+              <div><strong className="text-[#d1bfa5]">{t.guestsLabel}:</strong> {guests}</div>
+              <div><strong className="text-[#d1bfa5]">{t.contactLabel}:</strong> {guestName} ({guestEmail})</div>
             </div>
             <button
               onClick={onClose}
@@ -101,7 +101,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <div className="grid grid-cols-2 gap-4">
                 <div className="border-b border-[#4c463d] pb-2">
                   <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
-                    Llegada
+                    {t.checkInLabel}
                   </label>
                   <input
                     type="date"
@@ -113,7 +113,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
                 <div className="border-b border-[#4c463d] pb-2">
                   <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
-                    Salida
+                    {t.checkOutLabel}
                   </label>
                   <input
                     type="date"
@@ -137,7 +137,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                     <option key={num} value={num} className="bg-[#221f1c] text-[#e8e1dd]">
-                      {num} {num === 1 ? 'Huésped' : 'Huéspedes'}
+                      {num} {num === 1 ? t.guestSingular : t.guestPlural}
                     </option>
                   ))}
                 </select>
@@ -147,12 +147,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <div className="space-y-4 pt-2">
                 <div className="border-b border-[#4c463d] pb-2">
                   <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
-                    Nombre Completo
+                    {t.fullNameLabel}
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Tu nombre completo"
+                    placeholder={t.fullNamePlaceholder}
                     value={guestName}
                     onChange={(e) => setGuestName(e.target.value)}
                     className="w-full bg-transparent border-none p-0 text-[#e8e1dd] font-sans text-sm focus:ring-0 focus:outline-none"
@@ -161,12 +161,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
                 <div className="border-b border-[#4c463d] pb-2">
                   <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
-                    Correo Electrónico
+                    {t.emailLabel}
                   </label>
                   <input
                     type="email"
                     required
-                    placeholder="correo@ejemplo.com"
+                    placeholder={t.emailPlaceholder}
                     value={guestEmail}
                     onChange={(e) => setGuestEmail(e.target.value)}
                     className="w-full bg-transparent border-none p-0 text-[#e8e1dd] font-sans text-sm focus:ring-0 focus:outline-none"
@@ -175,11 +175,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
                 <div className="border-b border-[#4c463d] pb-2">
                   <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
-                    Teléfono de Contacto
+                    {t.phoneLabel}
                   </label>
                   <input
                     type="tel"
-                    placeholder="+56 9 1234 5678"
+                    placeholder={t.phonePlaceholder}
                     value={guestPhone}
                     onChange={(e) => setGuestPhone(e.target.value)}
                     className="w-full bg-transparent border-none p-0 text-[#e8e1dd] font-sans text-sm focus:ring-0 focus:outline-none"
@@ -190,7 +190,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               {/* Pricing breakdown */}
               <div className="bg-[#1e1b19] p-4 rounded-sm border border-[#4c463d]/40 space-y-2 font-sans text-xs">
                 <div className="flex justify-between text-[#cfc5ba]">
-                  <span>Tarifa noche ({nights} noches)</span>
+                  <span>{t.nightlyRateCalc} ({nights} {t.nightsPlural})</span>
                   <span>${pricePerNight * nights} USD</span>
                 </div>
                 <div className="flex justify-between text-[#d1bfa5] font-semibold text-sm pt-2 border-t border-[#4c463d]/30">
@@ -204,7 +204,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 disabled={isSubmitting}
                 className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all cursor-pointer shadow-lg disabled:opacity-50"
               >
-                {isSubmitting ? 'Procesando...' : t.confirmBooking}
+                {isSubmitting ? t.processing : t.confirmBooking}
               </button>
             </form>
           </div>

@@ -74,33 +74,23 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Right CTA & Language Selector */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-1.5 text-[#cfc5ba] font-sans text-xs tracking-widest">
-            <button
-              onClick={() => setLang('es')}
-              className={`transition-colors duration-300 ${
-                lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'hover:text-[#e8e1dd]'
-              }`}
-            >
-              ES
-            </button>
-            <span className="text-[#4c463d]">|</span>
-            <button
-              onClick={() => setLang('en')}
-              className={`transition-colors duration-300 ${
-                lang === 'en' ? 'text-[#d1bfa5] font-semibold' : 'hover:text-[#e8e1dd]'
-              }`}
-            >
-              EN
-            </button>
-            <span className="text-[#4c463d]">|</span>
-            <button
-              onClick={() => setLang('por')}
-              className={`transition-colors duration-300 ${
-                lang === 'por' ? 'text-[#d1bfa5] font-semibold' : 'hover:text-[#e8e1dd]'
-              }`}
-            >
-              POR
-            </button>
+          <div className="flex items-center gap-2 text-[#cfc5ba] font-sans text-xs tracking-widest">
+            {(['es', 'en', 'por'] as const).map((l) => {
+              const active = lang === l;
+              return (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  className={`px-2 py-1 rounded-sm border transition-all duration-300 font-sans text-xs uppercase tracking-widest cursor-pointer ${
+                    active
+                      ? 'border-[#d1bfa5] text-[#d1bfa5] font-semibold bg-[#d1bfa5]/10 shadow-sm'
+                      : 'border-transparent text-[#cfc5ba] hover:border-[#d1bfa5] hover:text-[#e8e1dd] hover:bg-[#d1bfa5]/5'
+                  }`}
+                >
+                  {l}
+                </button>
+              );
+            })}
           </div>
 
           <button
@@ -113,27 +103,23 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Mobile Hamburger Toggle */}
         <div className="flex md:hidden items-center gap-3">
-          <div className="flex items-center gap-1 text-[#cfc5ba] font-sans text-xs tracking-widest mr-1">
-            <button
-              onClick={() => setLang('es')}
-              className={lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
-            >
-              ES
-            </button>
-            <span>|</span>
-            <button
-              onClick={() => setLang('en')}
-              className={lang === 'en' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
-            >
-              EN
-            </button>
-            <span>|</span>
-            <button
-              onClick={() => setLang('por')}
-              className={lang === 'por' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
-            >
-              POR
-            </button>
+          <div className="flex items-center gap-1.5 text-[#cfc5ba] font-sans text-xs tracking-widest mr-1">
+            {(['es', 'en', 'por'] as const).map((l) => {
+              const active = lang === l;
+              return (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  className={`px-1.5 py-0.5 rounded-sm border transition-all duration-300 font-sans text-[11px] uppercase tracking-wider cursor-pointer ${
+                    active
+                      ? 'border-[#d1bfa5] text-[#d1bfa5] font-semibold bg-[#d1bfa5]/10'
+                      : 'border-transparent text-[#cfc5ba] hover:border-[#d1bfa5] hover:text-[#e8e1dd]'
+                  }`}
+                >
+                  {l}
+                </button>
+              );
+            })}
           </div>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
