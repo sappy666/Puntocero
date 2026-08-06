@@ -47,7 +47,7 @@ export const LocationMap: React.FC<LocationMapProps> = ({ lang }) => {
           <div className="pt-2">
             <button
               onClick={handleOpenGoogleMaps}
-              className="group/btn inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#d1bfa5] border-b border-[#d1bfa5] pb-1 hover:text-[#e8e1dd] hover:border-[#e8e1dd] transition-colors duration-300 cursor-pointer"
+              className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#d1bfa5] border-b border-[#d1bfa5] pb-1 hover:text-[#e8e1dd] hover:border-[#e8e1dd] transition-colors duration-300 cursor-pointer"
             >
               <span>{t.openMaps}</span>
               <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />

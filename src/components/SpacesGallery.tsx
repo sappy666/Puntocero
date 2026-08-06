@@ -19,7 +19,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#e8e1dd]">
             {t.title}
           </h2>
-          <span className="font-mono text-xs uppercase tracking-widest text-[#cfc5ba] hidden md:block">
+          <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] hidden md:block">
             {t.tag}
           </span>
         </header>
@@ -54,7 +54,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
                     {/* Hover Lightbox Indicator */}
                     <div className="absolute top-4 right-4 bg-[#151310]/90 border border-[#4c463d] backdrop-blur-md p-2.5 text-[#d1bfa5] opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 rounded-sm flex items-center gap-2">
                       <Maximize2 size={16} />
-                      <span className="font-mono text-[10px] uppercase tracking-widest hidden sm:inline">Ampliar</span>
+                      <span className="font-sans text-[10px] uppercase tracking-widest hidden sm:inline">Ampliar</span>
                     </div>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
                     onClick={() =>
                       onSelectImage({ src: space.image, title: space.name, desc: space.desc })
                     }
-                    className="group/btn inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#e8e1dd] border-b border-[#4c463d] pb-1 hover:border-[#d1bfa5] hover:text-[#d1bfa5] transition-all duration-300 pt-2 cursor-pointer"
+                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#e8e1dd] border-b border-[#4c463d] pb-1 hover:border-[#d1bfa5] hover:text-[#d1bfa5] transition-all duration-300 pt-2 cursor-pointer"
                   >
                     <span>Ver Imagen Completa</span>
                     <Maximize2 size={12} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />

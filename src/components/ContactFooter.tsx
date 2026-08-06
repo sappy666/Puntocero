@@ -54,7 +54,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
                   <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
                     <Phone size={18} className="text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors" />
                   </div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
+                  <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
                     {c.phone}
                   </span>
                 </a>
@@ -66,7 +66,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
                   <div className="p-2.5 bg-[#221f1c] border border-[#4c463d]/40 rounded-sm group-hover:border-[#d1bfa5] group-hover:bg-[#2c2723] transition-all duration-300">
                     <Mail size={18} className="text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors" />
                   </div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
+                  <span className="font-sans text-xs uppercase tracking-widest text-[#cfc5ba] group-hover:text-[#d1bfa5] transition-colors duration-300">
                     {c.email}
                   </span>
                 </a>
@@ -77,7 +77,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
           {/* Right Column: Contact Form */}
           <div className="md:col-span-7 lg:col-span-6 lg:col-start-7">
             {submitted && (
-              <div className="mb-6 p-4 bg-[#d1bfa5]/10 border border-[#d1bfa5]/40 text-[#d1bfa5] flex items-center gap-3 font-mono text-xs uppercase tracking-wide rounded-sm animate-fadeIn">
+              <div className="mb-6 p-4 bg-[#d1bfa5]/10 border border-[#d1bfa5]/40 text-[#d1bfa5] flex items-center gap-3 font-sans text-xs uppercase tracking-wide rounded-sm animate-fadeIn">
                 <CheckCircle size={20} />
                 <span>{c.form.success}</span>
               </div>
@@ -86,7 +86,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Name */}
               <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-                <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                   {c.form.name}
                 </label>
                 <input
@@ -101,7 +101,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
 
               {/* Email */}
               <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-                <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                   {c.form.email}
                 </label>
                 <input
@@ -116,7 +116,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
 
               {/* Message */}
               <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-                <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                   {c.form.message}
                 </label>
                 <textarea
@@ -132,7 +132,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#d1bfa5] text-[#5a4d39] px-8 py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 cursor-pointer disabled:opacity-50"
+                className="bg-[#d1bfa5] text-[#5a4d39] px-8 py-4 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 cursor-pointer disabled:opacity-50"
               >
                 {isSubmitting ? c.form.sending : c.form.send}
               </button>
@@ -142,7 +142,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
 
         {/* Bottom Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-16 border-t border-[#4c463d]/30 mt-20">
-          <div className="flex flex-wrap gap-6 font-mono text-xs uppercase tracking-widest text-[#cfc5ba]">
+          <div className="flex flex-wrap gap-6 font-sans text-xs uppercase tracking-widest text-[#cfc5ba]">
             <a href="#" className="hover:text-[#d1bfa5] transition-colors duration-300">
               {f.privacy}
             </a>

@@ -35,7 +35,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ lang, onOpenBooking }) => 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Text Info */}
           <div className="lg:col-span-8 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#d1bfa5]/10 border border-[#d1bfa5]/30 rounded-full text-[#d1bfa5] font-mono text-[11px] uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#d1bfa5]/10 border border-[#d1bfa5]/30 rounded-full text-[#d1bfa5] font-sans text-[11px] uppercase tracking-widest">
               <Sparkles size={12} className="animate-pulse" />
               <span>{t.tag}</span>
             </div>
@@ -53,13 +53,13 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ lang, onOpenBooking }) => 
           <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-4">
             <button
               onClick={onOpenBooking}
-              className="w-full sm:w-auto lg:w-full bg-[#d1bfa5] text-[#5a4d39] px-8 py-5 font-mono text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-3 hover:bg-[#e8e1dd] hover:text-[#151310] transition-all duration-500 shadow-xl hover:shadow-[#d1bfa5]/20 transform hover:-translate-y-0.5 cursor-pointer group/btn"
+              className="w-full sm:w-auto lg:w-full bg-[#d1bfa5] text-[#5a4d39] px-8 py-5 font-sans text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-3 hover:bg-[#e8e1dd] hover:text-[#151310] transition-all duration-500 shadow-xl hover:shadow-[#d1bfa5]/20 transform hover:-translate-y-0.5 cursor-pointer group/btn"
             >
               <Calendar size={16} />
               <span>{t.button}</span>
               <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
             </button>
-            <span className="font-mono text-[11px] uppercase tracking-widest text-[#cfc5ba]/70">
+            <span className="font-sans text-[11px] uppercase tracking-widest text-[#cfc5ba]/70">
               $450 USD / Noche • Hasta 10 Huéspedes
             </span>
           </div>

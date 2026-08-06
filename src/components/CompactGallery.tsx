@@ -29,7 +29,7 @@ export const CompactGallery: React.FC<CompactGalleryProps> = ({ lang, onSelectIm
       {/* Gallery Header & Filter Tabs */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
-          <div className="inline-flex items-center gap-2 text-[#d1bfa5] font-mono text-xs uppercase tracking-widest mb-2">
+          <div className="inline-flex items-center gap-2 text-[#d1bfa5] font-sans text-xs uppercase tracking-widest mb-2">
             <Images size={14} />
             <span>{t.fullGallerySubtitle || 'Explora todos los rincones'}</span>
           </div>
@@ -39,14 +39,14 @@ export const CompactGallery: React.FC<CompactGalleryProps> = ({ lang, onSelectIm
         </div>
 
         {/* Counter Badge */}
-        <div className="font-mono text-xs text-[#cfc5ba] bg-[#221f1c] px-3.5 py-2 border border-[#4c463d]/40 rounded-sm w-fit">
+        <div className="font-sans text-xs text-[#cfc5ba] bg-[#221f1c] px-3.5 py-2 border border-[#4c463d]/40 rounded-sm w-fit">
           {filteredPhotos.length} {filteredPhotos.length === 1 ? 'Fotografía' : 'Fotografías'}
         </div>
       </div>
 
       {/* Filter Category Pills */}
       <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
-        <div className="flex items-center gap-1.5 text-[#cfc5ba] mr-2 font-mono text-xs uppercase tracking-wider shrink-0">
+        <div className="flex items-center gap-1.5 text-[#cfc5ba] mr-2 font-sans text-xs uppercase tracking-wider shrink-0">
           <Filter size={13} className="text-[#d1bfa5]" />
           <span className="hidden sm:inline">Filtrar:</span>
         </div>
@@ -62,7 +62,7 @@ export const CompactGallery: React.FC<CompactGalleryProps> = ({ lang, onSelectIm
             <button
               key={catKey}
               onClick={() => setActiveCategory(catKey)}
-              className={`px-4 py-2 font-mono text-xs uppercase tracking-widest transition-all duration-300 rounded-sm shrink-0 cursor-pointer border ${
+              className={`px-4 py-2 font-sans text-xs uppercase tracking-widest transition-all duration-300 rounded-sm shrink-0 cursor-pointer border ${
                 isActive
                   ? 'bg-[#d1bfa5] text-[#1c1917] border-[#d1bfa5] font-semibold shadow-md'
                   : 'bg-[#1c1917]/80 text-[#cfc5ba] border-[#4c463d]/40 hover:border-[#d1bfa5]/60 hover:text-[#e8e1dd] hover:bg-[#282421]'
@@ -101,7 +101,7 @@ export const CompactGallery: React.FC<CompactGalleryProps> = ({ lang, onSelectIm
 
             {/* Title & Tag on Hover */}
             <div className="absolute bottom-0 left-0 right-0 p-3 transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-              <span className="font-mono text-[9px] uppercase tracking-wider text-[#d1bfa5] block mb-0.5">
+              <span className="font-sans text-[9px] uppercase tracking-wider text-[#d1bfa5] block mb-0.5">
                 {t.categories?.[photo.category as keyof typeof t.categories] || photo.category}
               </span>
               <p className="font-serif text-xs text-white line-clamp-1 leading-snug">

@@ -74,7 +74,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             <p className="text-[#cfc5ba] text-base leading-relaxed">
               {t.successMessage}
             </p>
-            <div className="bg-[#1e1b19] p-4 rounded-sm border border-[#4c463d]/30 text-left font-mono text-xs space-y-2 text-[#cfc5ba]">
+            <div className="bg-[#1e1b19] p-4 rounded-sm border border-[#4c463d]/30 text-left font-sans text-xs space-y-2 text-[#cfc5ba]">
               <div><strong className="text-[#d1bfa5]">Llegada:</strong> {checkIn || 'Por confirmar'}</div>
               <div><strong className="text-[#d1bfa5]">Salida:</strong> {checkOut || 'Por confirmar'}</div>
               <div><strong className="text-[#d1bfa5]">Huéspedes:</strong> {guests}</div>
@@ -82,7 +82,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             </div>
             <button
               onClick={onClose}
-              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-3 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all cursor-pointer"
+              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-3 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all cursor-pointer"
             >
               {t.close}
             </button>
@@ -90,7 +90,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         ) : (
           <div>
             <div className="mb-6 pb-4 border-b border-[#4c463d]/40">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#d1bfa5]">Punto Cero Patagonia</span>
+              <span className="font-sans text-xs uppercase tracking-widest text-[#d1bfa5]">Punto Cero Patagonia</span>
               <h3 className="font-serif text-2xl sm:text-3xl text-[#e8e1dd] mt-1">
                 {t.bookingTitle}
               </h3>
@@ -100,7 +100,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               {/* Dates Grid */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="border-b border-[#4c463d] pb-2">
-                  <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                  <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                     Llegada
                   </label>
                   <input
@@ -112,7 +112,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   />
                 </div>
                 <div className="border-b border-[#4c463d] pb-2">
-                  <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                  <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                     Salida
                   </label>
                   <input
@@ -127,7 +127,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               {/* Guests */}
               <div className="border-b border-[#4c463d] pb-2">
-                <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                   {t.guestsLabel}
                 </label>
                 <select
@@ -146,7 +146,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               {/* Personal Details */}
               <div className="space-y-4 pt-2">
                 <div className="border-b border-[#4c463d] pb-2">
-                  <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                  <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                     Nombre Completo
                   </label>
                   <input
@@ -160,7 +160,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
 
                 <div className="border-b border-[#4c463d] pb-2">
-                  <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                  <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                     Correo Electrónico
                   </label>
                   <input
@@ -174,7 +174,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
 
                 <div className="border-b border-[#4c463d] pb-2">
-                  <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+                  <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                     Teléfono de Contacto
                   </label>
                   <input
@@ -188,7 +188,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               {/* Pricing breakdown */}
-              <div className="bg-[#1e1b19] p-4 rounded-sm border border-[#4c463d]/40 space-y-2 font-mono text-xs">
+              <div className="bg-[#1e1b19] p-4 rounded-sm border border-[#4c463d]/40 space-y-2 font-sans text-xs">
                 <div className="flex justify-between text-[#cfc5ba]">
                   <span>Tarifa noche ({nights} noches)</span>
                   <span>${pricePerNight * nights} USD</span>
@@ -202,7 +202,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all cursor-pointer shadow-lg disabled:opacity-50"
+                className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#383431] hover:text-[#e8e1dd] transition-all cursor-pointer shadow-lg disabled:opacity-50"
               >
                 {isSubmitting ? 'Procesando...' : t.confirmBooking}
               </button>

@@ -53,7 +53,7 @@ export const Amenities: React.FC<AmenitiesProps> = ({ lang }) => {
                   {getIcon(item.icon)}
                 </div>
               </div>
-              <span className="font-mono text-xs uppercase tracking-widest text-[#e8e1dd] group-hover:text-[#d1bfa5] border-b border-[#4c463d]/30 pb-2 group-hover:border-[#d1bfa5] transition-colors duration-300">
+              <span className="font-sans text-xs uppercase tracking-widest text-[#e8e1dd] group-hover:text-[#d1bfa5] border-b border-[#4c463d]/30 pb-2 group-hover:border-[#d1bfa5] transition-colors duration-300">
                 {item.label}
               </span>
             </div>

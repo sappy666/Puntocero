@@ -50,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
           <div className="pt-4">
             <a
               href="#features"
-              className="group inline-flex items-center gap-3 border-b border-[#d1bfa5] text-[#d1bfa5] pb-1 font-mono text-xs uppercase tracking-widest hover:opacity-90 hover:text-white hover:border-white transition-all duration-300"
+              className="group inline-flex items-center gap-3 border-b border-[#d1bfa5] text-[#d1bfa5] pb-1 font-sans text-xs uppercase tracking-widest hover:opacity-90 hover:text-white hover:border-white transition-all duration-300"
             >
               <span>{t.discoverMore}</span>
               <ArrowDown size={14} className="group-hover:translate-y-1 transition-transform duration-300" />
@@ -66,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Check-in */}
             <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-              <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+              <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                 {t.checkIn}
               </label>
               <input
@@ -80,7 +80,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
 
             {/* Check-out */}
             <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-              <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+              <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                 {t.checkOut}
               </label>
               <input
@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
 
             {/* Guests Selector */}
             <div className="border-b border-[#4c463d] pb-2 focus-within:border-[#d1bfa5] transition-colors duration-300">
-              <label className="block font-mono text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
+              <label className="block font-sans text-xs uppercase tracking-wider mb-1 text-[#cfc5ba]">
                 {t.guests}
               </label>
               <select
@@ -112,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
 
             <button
               type="submit"
-              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 shadow-md cursor-pointer"
+              className="w-full bg-[#d1bfa5] text-[#5a4d39] py-4 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-[#e8e1dd] hover:text-[#151310] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#d1bfa5]/20 transition-all duration-500 shadow-md cursor-pointer"
             >
               {t.checkAvailability}
             </button>

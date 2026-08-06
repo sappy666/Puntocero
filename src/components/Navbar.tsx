@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
         </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-[#cfc5ba] font-mono text-xs uppercase tracking-widest">
+        <div className="hidden md:flex items-center gap-8 text-[#cfc5ba] font-sans text-xs uppercase tracking-widest">
           <a
             href="#features"
             className="hover:text-[#d1bfa5] transition-colors duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#d1bfa5] hover:after:w-full after:transition-all after:duration-300"
@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Right CTA & Language Selector */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-1.5 text-[#cfc5ba] font-mono text-xs tracking-widest">
+          <div className="flex items-center gap-1.5 text-[#cfc5ba] font-sans text-xs tracking-widest">
             <button
               onClick={() => setLang('es')}
               className={`transition-colors duration-300 ${
@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
           <button
             onClick={onOpenBooking}
-            className="bg-[#d1bfa5] text-[#5a4d39] px-6 py-3 font-mono text-xs uppercase tracking-widest font-medium hover:bg-[#383431] hover:text-[#e8e1dd] transition-all duration-500 transform hover:scale-[0.98] shadow-md cursor-pointer"
+            className="bg-[#d1bfa5] text-[#5a4d39] px-6 py-3 font-sans text-xs uppercase tracking-widest font-medium hover:bg-[#383431] hover:text-[#e8e1dd] transition-all duration-500 transform hover:scale-[0.98] shadow-md cursor-pointer"
           >
             {t.bookNow}
           </button>
@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
         {/* Mobile Hamburger Toggle */}
         <div className="flex md:hidden items-center gap-3">
-          <div className="flex items-center gap-1 text-[#cfc5ba] font-mono text-xs tracking-widest mr-1">
+          <div className="flex items-center gap-1 text-[#cfc5ba] font-sans text-xs tracking-widest mr-1">
             <button
               onClick={() => setLang('es')}
               className={lang === 'es' ? 'text-[#d1bfa5] font-semibold' : 'text-gray-400'}
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#1e1b19] border-b border-[#4c463d]/40 px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest animate-fadeIn">
+        <div className="md:hidden bg-[#1e1b19] border-b border-[#4c463d]/40 px-6 py-6 space-y-4 font-sans text-xs uppercase tracking-widest animate-fadeIn">
           <a
             href="#features"
             onClick={() => setMobileMenuOpen(false)}
@@ -186,7 +186,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
               setMobileMenuOpen(false);
               onOpenBooking();
             }}
-            className="w-full mt-4 bg-[#d1bfa5] text-[#5a4d39] py-3 font-mono text-xs uppercase tracking-widest font-semibold text-center"
+            className="w-full mt-4 bg-[#d1bfa5] text-[#5a4d39] py-3 font-sans text-xs uppercase tracking-widest font-semibold text-center"
           >
             {t.bookNow}
           </button>

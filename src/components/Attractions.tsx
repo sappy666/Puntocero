@@ -23,7 +23,7 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
 
         {/* Right Column: Text */}
         <div className="md:col-span-6 md:col-start-7 order-1 md:order-2 space-y-6">
-          <span className="font-mono text-xs uppercase tracking-widest text-[#d1bfa5] block">
+          <span className="font-sans text-xs uppercase tracking-widest text-[#d1bfa5] block">
             {t.tag}
           </span>
 
@@ -31,7 +31,7 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
             {t.title}
           </h2>
 
-          <div className="group inline-flex items-center gap-3 text-[#cfc5ba] border-b border-[#4c463d]/40 pb-3 font-mono text-xs tracking-widest uppercase hover:text-[#d1bfa5] hover:border-[#d1bfa5] transition-colors duration-300">
+          <div className="group inline-flex items-center gap-3 text-[#cfc5ba] border-b border-[#4c463d]/40 pb-3 font-sans text-xs tracking-widest uppercase hover:text-[#d1bfa5] hover:border-[#d1bfa5] transition-colors duration-300">
             <Compass size={18} className="text-[#d1bfa5] group-hover:rotate-45 transition-transform duration-500" />
             <span>{t.distance}</span>
           </div>

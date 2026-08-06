@@ -14,7 +14,7 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ image, onClose }) 
       {/* Top Bar */}
       <div className="flex justify-between items-center text-[#e8e1dd] z-10 max-w-7xl mx-auto w-full">
         <div>
-          <span className="font-mono text-xs uppercase tracking-widest text-[#d1bfa5]">Punto Cero Patagonia</span>
+          <span className="font-sans text-xs uppercase tracking-widest text-[#d1bfa5]">Punto Cero Patagonia</span>
           <h3 className="font-serif text-2xl text-[#e8e1dd]">{image.title}</h3>
         </div>
         <button
