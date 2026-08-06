@@ -2,7 +2,7 @@ import React from 'react';
 import { Language, translations } from '../translations';
 import { Compass } from 'lucide-react';
 
-const retreatImage = new URL('../assets/images/patagonia_retreat_lake_1786044642443.jpg', import.meta.url).href;
+const retreatImage = "https://lh3.googleusercontent.com/aida-public/AB6AXuDJeZBRPfHfk-mnP3TueilqDDBs9l7P08C2nyTxXXXWzsOGxjfqBSVHMDpHwhu7CvjVhoIyJopvdSDTorPVoEWqeh53BB4-OnKhjkYFf7BrnXy7mY_n54zMWZ5pHaOaibZx53CoXxpYQlv1Vz4RwApchQ8acTh6S7gC6nv2iP1F78jTKVG8vHQkUmHLfLOxH2SH2uF2G43ijwv5FxoViInIlralqVl5Pn0b67Fe5WbYi0vbIXrGLCM0r6bx12KEHviR4A";
 
 interface ArchitecturalRetreatProps {
   lang: Language;
