@@ -29,29 +29,29 @@ export const Amenities: React.FC<AmenitiesProps> = ({ lang }) => {
   };
 
   return (
-    <section className="py-10 sm:py-14 px-6 sm:px-12 md:px-16 bg-[#0c0c0e] border-t border-zinc-800">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
-        {/* Compact Left Header */}
-        <div className="md:w-1/3 space-y-1">
-          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium block">
+    <section className="py-16 sm:py-20 px-6 sm:px-12 md:px-20 bg-[#0c0c0e] border-t border-zinc-800">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
+        {/* Header Title */}
+        <div className="lg:w-1/3 space-y-2">
+          <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 font-medium block">
             {t.title}
           </span>
-          <h3 className="font-serif text-xl sm:text-2xl font-light text-white tracking-tight">
+          <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight">
             {t.subtitle}
           </h3>
         </div>
 
-        {/* Compact Right Grid (6 items in a clean row/grid) */}
-        <div className="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        {/* Spacious Amenities Grid - 3 cols max on desktop so each item gets ample width without truncation */}
+        <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
           {t.items.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2.5 p-2 bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors duration-200"
+              className="flex items-center gap-3.5 px-4 py-3 sm:px-5 sm:py-3.5 bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-colors duration-200"
             >
-              <div className="p-1.5 bg-zinc-800/60 border border-zinc-700/60 shrink-0">
+              <div className="p-2 bg-zinc-800/60 border border-zinc-700/60 shrink-0 text-zinc-300">
                 {getIcon(item.icon)}
               </div>
-              <span className="font-sans text-[11px] uppercase tracking-wider text-zinc-300 truncate">
+              <span className="font-sans text-xs font-medium uppercase tracking-wider text-zinc-200 whitespace-nowrap">
                 {item.label}
               </span>
             </div>

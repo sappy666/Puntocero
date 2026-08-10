@@ -12,6 +12,7 @@ import { CtaBanner } from './components/CtaBanner';
 import { ContactFooter } from './components/ContactFooter';
 import { BookingModal } from './components/BookingModal';
 import { ImageLightbox } from './components/ImageLightbox';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Language } from './translations';
 
 export default function App() {
@@ -101,6 +102,9 @@ export default function App() {
         image={lightboxImage}
         onClose={() => setLightboxImage(null)}
       />
+
+      {/* Floating Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }
