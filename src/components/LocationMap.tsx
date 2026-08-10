@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ExternalLink, Navigation } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Language, translations } from '../translations';
 
 interface LocationMapProps {
@@ -19,7 +20,13 @@ export const LocationMap: React.FC<LocationMapProps> = ({ lang }) => {
     <section id="map" className="py-24 sm:py-36 px-6 sm:px-12 md:px-20 bg-[#0c0c0e] border-t border-zinc-800">
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-800 pb-8 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-800 pb-8 gap-6"
+        >
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 block mb-3 font-medium">
               UBICACIÓN PRIVILEGIADA
@@ -40,10 +47,16 @@ export const LocationMap: React.FC<LocationMapProps> = ({ lang }) => {
             <span>{t.openMaps}</span>
             <ExternalLink size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
           </button>
-        </div>
+        </motion.div>
 
         {/* Embedded Interactive Map Frame */}
-        <div className="relative w-full h-[450px] sm:h-[550px] md:h-[600px] border border-zinc-800 bg-zinc-950 shadow-2xl overflow-hidden group">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+          className="relative w-full h-[450px] sm:h-[550px] md:h-[600px] border border-zinc-800 bg-zinc-950 shadow-2xl overflow-hidden group"
+        >
           {/* Interactive Google Map iframe */}
           <iframe
             title="Ubicación Punto Cero Patagonia en Bahía Murta"
@@ -81,7 +94,7 @@ export const LocationMap: React.FC<LocationMapProps> = ({ lang }) => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

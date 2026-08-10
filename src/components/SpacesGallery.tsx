@@ -1,5 +1,6 @@
 import React from 'react';
 import { Maximize2 } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Language, translations } from '../translations';
 
 interface SpacesGalleryProps {
@@ -14,7 +15,13 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
     <section id="gallery" className="py-28 sm:py-40 md:py-48 px-6 sm:px-12 md:px-20 bg-[#0c0c0e]">
       <div className="max-w-7xl mx-auto">
         {/* Header Bar */}
-        <header className="mb-20 border-b border-zinc-800 pb-8">
+        <motion.header
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-20 border-b border-zinc-800 pb-8"
+        >
           <div className="flex justify-between items-end mb-3">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
               {t.title}
@@ -28,7 +35,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
               {t.subtitle}
             </p>
           )}
-        </header>
+        </motion.header>
 
         {/* Spaces List */}
         <div className="space-y-28 md:space-y-36">
@@ -36,8 +43,12 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
             const isEven = idx % 2 === 0;
 
             return (
-              <div
+              <motion.div
                 key={space.id}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center"
               >
                 {/* Image Column - Expansive */}
@@ -74,7 +85,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
                     {space.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

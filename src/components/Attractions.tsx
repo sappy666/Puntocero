@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Language, translations } from '../translations';
 
 interface AttractionsProps {
@@ -13,16 +14,28 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
     <section id="attractions" className="py-28 sm:py-40 md:py-48 px-6 sm:px-12 md:px-20 bg-[#0c0c0e]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center border-t border-zinc-800 pt-24">
         {/* Left Column: Image */}
-        <div className="lg:col-span-6 order-2 lg:order-1 overflow-hidden border border-zinc-800 hover:border-zinc-500 transition-all duration-300 group shadow-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-6 order-2 lg:order-1 overflow-hidden border border-zinc-800 hover:border-zinc-500 transition-all duration-300 group shadow-2xl"
+        >
           <img
             src={t.image}
             alt={t.title}
             className="w-full aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
           />
-        </div>
+        </motion.div>
 
         {/* Right Column: Text */}
-        <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+          className="lg:col-span-6 order-1 lg:order-2 space-y-6"
+        >
           <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 block font-medium">
             {t.tag}
           </span>
@@ -39,7 +52,7 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
           <p className="text-zinc-300 text-base sm:text-lg font-light leading-relaxed max-w-xl">
             {t.desc}
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

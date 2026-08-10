@@ -1,5 +1,6 @@
 import React from 'react';
-import { Calendar, ArrowRight, Sparkles } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Language, translations } from '../translations';
 
 interface CtaBannerProps {
@@ -28,7 +29,13 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ lang, onOpenBooking }) => 
       </div>
 
       {/* Main Content Card */}
-      <div className="relative z-10 max-w-5xl mx-auto border border-zinc-800 bg-[#121215]/90 backdrop-blur-md p-10 sm:p-16 shadow-2xl hover:border-zinc-700 transition-all duration-300">
+      <motion.div
+        initial={{ opacity: 0, y: 30, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 max-w-5xl mx-auto border border-zinc-800 bg-[#121215]/90 backdrop-blur-md p-10 sm:p-16 shadow-2xl hover:border-zinc-700 transition-all duration-300"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Text Info */}
           <div className="lg:col-span-8 space-y-5">
@@ -47,20 +54,22 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ lang, onOpenBooking }) => 
 
           {/* Action CTA Button */}
           <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-3">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={onOpenBooking}
-              className="w-full sm:w-auto lg:w-full bg-zinc-100 text-zinc-950 px-6 py-4 font-sans text-xs uppercase tracking-widest font-medium flex items-center justify-center gap-2 hover:bg-white transition-all duration-200 cursor-pointer group/btn"
+              className="w-full sm:w-auto lg:w-full bg-zinc-100 text-zinc-950 px-6 py-4 font-sans text-xs uppercase tracking-widest font-medium flex items-center justify-center gap-2 hover:bg-white transition-all duration-200 cursor-pointer group/btn shadow-md hover:shadow-lg"
             >
               <Calendar size={15} />
               <span>{t.button}</span>
               <ArrowRight size={15} className="group-hover/btn:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            </motion.button>
             <span className="font-sans text-[11px] uppercase tracking-wider text-zinc-400">
               $450 USD / Noche • Hasta 10 Huéspedes
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
