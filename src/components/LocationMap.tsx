@@ -36,7 +36,7 @@ export const LocationMap: React.FC<LocationMapProps> = ({ lang }) => {
             <MapPin size={20} />
           </div>
 
-          <h3 className="font-sans text-2xl font-light text-white tracking-tight">
+          <h3 className="font-serif text-2xl sm:text-3xl font-light text-white tracking-tight">
             {t.title}
           </h3>
 

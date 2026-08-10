@@ -16,7 +16,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
         {/* Header Bar */}
         <header className="mb-20 border-b border-zinc-800 pb-8">
           <div className="flex justify-between items-end mb-3">
-            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
               {t.title}
             </h2>
             <span className="font-sans text-xs uppercase tracking-[0.2em] text-zinc-400 hidden md:block">
@@ -67,7 +67,7 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
 
                 {/* Text Column */}
                 <div className={`md:col-span-4 space-y-4 ${isEven ? 'md:order-2' : 'md:order-1'}`}>
-                  <h3 className="font-sans text-3xl sm:text-4xl font-light text-white tracking-tight">
+                  <h3 className="font-serif text-3xl sm:text-4xl font-light text-white tracking-tight">
                     {space.name}
                   </h3>
                   <p className="text-zinc-300 text-base font-light leading-relaxed">

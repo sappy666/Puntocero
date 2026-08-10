@@ -39,15 +39,15 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full items-end">
         {/* Left Column: Title & Quote */}
         <div className="lg:col-span-8 text-zinc-100 space-y-8">
-          <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-tight leading-[0.95] text-white">
+          <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[9.5rem] font-light tracking-tight leading-[0.9] text-white">
             {t.title}
           </h1>
 
           <div className="max-w-2xl space-y-4">
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light leading-relaxed">
+            <p className="text-xl sm:text-2xl text-zinc-200 font-light leading-relaxed">
               {t.subtitle}
             </p>
-            <p className="font-sans text-xl sm:text-2xl text-zinc-400 font-light pt-2 tracking-wide">
+            <p className="font-serif italic text-2xl sm:text-3xl text-zinc-300 font-light pt-2 tracking-wide">
               {t.tagline}
             </p>
           </div>

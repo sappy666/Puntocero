@@ -36,7 +36,7 @@ export const Amenities: React.FC<AmenitiesProps> = ({ lang }) => {
           <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium block">
             {t.title}
           </span>
-          <h3 className="font-sans text-xl sm:text-2xl font-light text-white tracking-tight">
+          <h3 className="font-serif text-xl sm:text-2xl font-light text-white tracking-tight">
             {t.subtitle}
           </h3>
         </div>

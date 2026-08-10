@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-serif: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --font-mono: 'Inter', monospace;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: monospace;
 }
 
 @layer base {
   :root {
-    --font-serif: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-    --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
-    --font-mono: 'Inter', monospace;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: monospace;
   }
 
   body {
@@ -21,10 +21,9 @@
     letter-spacing: -0.01em;
   }
 
-  h1, h2, h3, .font-serif-title {
+  h1, h2, h3, .font-serif {
     font-family: var(--font-serif);
     font-weight: 300;
-    letter-spacing: -0.02em;
   }
 
   .font-label-caps {

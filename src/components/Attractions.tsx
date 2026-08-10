@@ -27,7 +27,7 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
             {t.tag}
           </span>
 
-          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-light text-white leading-tight tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white leading-tight tracking-tight">
             {t.title}
           </h2>
 

@@ -33,7 +33,7 @@ export const CompactGallery: React.FC<CompactGalleryProps> = ({ lang, onSelectIm
             <Images size={14} />
             <span>{t.fullGallerySubtitle || 'Explora todos los rincones'}</span>
           </div>
-          <h3 className="font-sans text-2xl sm:text-3xl font-light text-white tracking-tight">
+          <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-light text-white tracking-tight">
             {t.fullGalleryTitle || 'Galería Completa de Fotografía'}
           </h3>
         </div>

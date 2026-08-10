@@ -68,7 +68,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             <div className="w-14 h-14 bg-zinc-800 text-white rounded-full flex items-center justify-center mx-auto border border-zinc-700">
               <CheckCircle size={30} />
             </div>
-            <h3 className="font-sans text-2xl font-light text-white">
+            <h3 className="font-serif text-2xl font-light text-white">
               {t.bookingTitle}
             </h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
@@ -91,7 +91,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           <div>
             <div className="mb-6 pb-4 border-b border-zinc-800">
               <span className="font-sans text-[11px] uppercase tracking-widest text-zinc-400">Punto Cero Patagonia</span>
-              <h3 className="font-sans text-2xl font-light text-white mt-1">
+              <h3 className="font-serif text-2xl font-light text-white mt-1">
                 {t.bookingTitle}
               </h3>
             </div>

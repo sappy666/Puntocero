@@ -43,7 +43,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
               <div className="mb-6">
                 <Logo />
               </div>
-              <h2 className="font-sans text-3xl sm:text-4xl font-light text-white mb-3 tracking-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-3 tracking-tight">
                 {c.title}
               </h2>
               <p className="text-zinc-400 text-sm font-light max-w-sm mb-6 leading-relaxed">
@@ -161,7 +161,7 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
           <div className="text-left md:text-right text-zinc-400 text-xs font-light space-y-1">
             <p>{f.copyright}</p>
             <p className="font-sans text-[11px] text-zinc-500">
-              Arquitectura: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-zinc-300 underline underline-offset-2 hover:text-white transition-colors">Tomás Villalón</a> &bull; Fotografía: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-zinc-300 underline underline-offset-2 hover:text-white transition-colors">Roland Halbe</a>
+              Fotografía: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-zinc-300 underline underline-offset-2 hover:text-white transition-colors">Roland Halbe</a>
             </p>
           </div>
         </div>

@@ -27,7 +27,7 @@ export const OriginPause: React.FC<OriginPauseProps> = ({ lang }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-sans text-3xl sm:text-4xl md:text-5xl text-zinc-100 tracking-[0.25em] uppercase font-extralight mb-6"
+          className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-zinc-100 tracking-[0.15em] uppercase font-light mb-6"
         >
           {t.title}
         </motion.h2>

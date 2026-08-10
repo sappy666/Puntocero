@@ -17,7 +17,7 @@ export const Manifesto: React.FC<ManifestoProps> = ({ lang }) => {
             <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 block mb-3 font-medium">
               {t.title}
             </span>
-            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-light leading-snug text-white tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-snug text-white tracking-tight">
               {t.lead}
             </h2>
           </div>

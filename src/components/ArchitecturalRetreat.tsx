@@ -23,7 +23,7 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
             <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 block mb-3 font-medium">
               {t.tag}
             </span>
-            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight">
               {t.title}
             </h2>
             <p className="font-sans text-base text-zinc-400 mt-2 font-light tracking-wide">
