@@ -141,6 +141,71 @@ export const translations = {
           alt: 'Casa Bahía Murta vista desde la ladera de la montaña',
         },
       ],
+      interiorTag: 'INTERIORES',
+      interiorTitle: 'El Interior',
+      interiorSubtitle: 'Espacios diseñados para habitar el silencio y la vista, con madera de Lenga, líneas curvas y ventanales que enmarcan la Patagonia.',
+      interiorPhotos: [
+        {
+          id: 'i-cocina',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2025/07/Cocina-8.webp',
+          alt: 'Cocina con isla de mármol y vista panorámica a las montañas',
+        },
+        {
+          id: 'i-cocina-cortinas',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-20-scaled.webp',
+          alt: 'Detalle de cocina con cortinas y lámparas colgantes al atardecer',
+        },
+        {
+          id: 'i-comedor',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-28-scaled.webp',
+          alt: 'Comedor y cocina con estructura de madera de Lenga y vista al lago',
+        },
+        {
+          id: 'i-comedor-atardecer',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-23-scaled.webp',
+          alt: 'Comedor circular al atardecer con vigas de madera curvas',
+        },
+        {
+          id: 'i-comedor-isla',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-24-scaled.webp',
+          alt: 'Isla de cocina y mesa de comedor con vista al Lago General Carrera al atardecer',
+        },
+        {
+          id: 'i-cocina-ventanal',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-14-scaled.webp',
+          alt: 'Ventanal curvo de la cocina con vista al lago y las montañas',
+        },
+        {
+          id: 'i-living',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2025/07/Sala-de-estar-4.webp',
+          alt: 'Sala de estar con sofás y vista panorámica a la cordillera',
+        },
+        {
+          id: 'i-living-curvo',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-30-scaled.webp',
+          alt: 'Living de líneas curvas con ventanales hacia el valle',
+        },
+        {
+          id: 'i-living-blanco',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-13-scaled.webp',
+          alt: 'Sala de estar con sillones blancos y vista panorámica al Lago General Carrera',
+        },
+        {
+          id: 'i-terraza-atardecer',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-05-scaled.webp',
+          alt: 'Terraza y living conectados al atardecer con vista a la cordillera',
+        },
+        {
+          id: 'i-terraza-comedor',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-09-scaled.webp',
+          alt: 'Terraza exterior con vista al comedor y la cocina iluminados al atardecer',
+        },
+        {
+          id: 'i-bano',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2025/07/Banos-8.webp',
+          alt: 'Tina exenta frente a ventanales curvos con vista al atardecer',
+        },
+      ],
     },
     amenities: {
       title: 'El Refugio',
@@ -517,6 +582,71 @@ export const translations = {
           id: 'g07',
           src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-07-scaled.webp',
           alt: 'Casa Bahía Murta seen from the mountainside',
+        },
+      ],
+      interiorTag: 'INTERIORS',
+      interiorTitle: 'The Interior',
+      interiorSubtitle: 'Spaces designed to inhabit silence and the view, with Lenga timber, curved lines and windows that frame Patagonia.',
+      interiorPhotos: [
+        {
+          id: 'i-cocina',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2025/07/Cocina-8.webp',
+          alt: 'Kitchen with marble island and panoramic mountain views',
+        },
+        {
+          id: 'i-cocina-cortinas',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-20-scaled.webp',
+          alt: 'Kitchen detail with curtains and pendant lamps at dusk',
+        },
+        {
+          id: 'i-comedor',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-28-scaled.webp',
+          alt: 'Dining and kitchen area with Lenga timber structure and lake view',
+        },
+        {
+          id: 'i-comedor-atardecer',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-23-scaled.webp',
+          alt: 'Circular dining room at dusk with curved timber beams',
+        },
+        {
+          id: 'i-comedor-isla',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-24-scaled.webp',
+          alt: 'Kitchen island and dining table with sunset views over Lake General Carrera',
+        },
+        {
+          id: 'i-cocina-ventanal',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-14-scaled.webp',
+          alt: 'Curved kitchen window wall overlooking the lake and mountains',
+        },
+        {
+          id: 'i-living',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2025/07/Sala-de-estar-4.webp',
+          alt: 'Living room with sofas and panoramic mountain range views',
+        },
+        {
+          id: 'i-living-curvo',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-30-scaled.webp',
+          alt: 'Curved-line living room with windows facing the valley',
+        },
+        {
+          id: 'i-living-blanco',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-13-scaled.webp',
+          alt: 'Living room with white armchairs and panoramic views of Lake General Carrera',
+        },
+        {
+          id: 'i-terraza-atardecer',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-05-scaled.webp',
+          alt: 'Terrace and living room connected at dusk with mountain range views',
+        },
+        {
+          id: 'i-terraza-comedor',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-09-scaled.webp',
+          alt: 'Outdoor terrace overlooking the illuminated dining and kitchen area at dusk',
+        },
+        {
+          id: 'i-bano',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2025/07/Banos-8.webp',
+          alt: 'Freestanding bathtub facing curved windows at sunset',
         },
       ],
     },
