@@ -53,24 +53,24 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
               <div className="space-y-3 pt-1">
                 <a
                   href={`tel:${c.phone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-3 group w-fit transition-colors duration-200"
+                  className="flex items-center gap-3 group max-w-full transition-colors duration-200"
                 >
-                  <div className="p-2 bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors">
+                  <div className="p-2 bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors shrink-0">
                     <Phone size={16} className="text-zinc-400 group-hover:text-white transition-colors" />
                   </div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors">
+                  <span className="font-sans text-xs uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors break-all">
                     {c.phone}
                   </span>
                 </a>
 
                 <a
                   href={`mailto:${c.email}`}
-                  className="flex items-center gap-3 group w-fit transition-colors duration-200"
+                  className="flex items-center gap-3 group max-w-full transition-colors duration-200"
                 >
-                  <div className="p-2 bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors">
+                  <div className="p-2 bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors shrink-0">
                     <Mail size={16} className="text-zinc-400 group-hover:text-white transition-colors" />
                   </div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors">
+                  <span className="font-sans text-xs uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors break-all">
                     {c.email}
                   </span>
                 </a>
@@ -160,9 +160,6 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({ lang }) => {
 
           <div className="text-left md:text-right text-zinc-400 text-xs font-light space-y-1">
             <p>{f.copyright}</p>
-            <p className="font-sans text-[11px] text-zinc-500">
-              Fotografía: <a href="https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/" target="_blank" rel="noopener noreferrer" className="text-zinc-300 underline underline-offset-2 hover:text-white transition-colors">Roland Halbe</a>
-            </p>
           </div>
         </div>
       </div>

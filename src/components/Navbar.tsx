@@ -115,87 +115,107 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
         </div>
 
         {/* Mobile Hamburger Toggle */}
-        <div className="flex md:hidden items-center gap-3">
-          <div className="flex items-center gap-1 text-zinc-400 font-sans text-xs tracking-widest mr-1">
-            {(['es', 'en', 'por'] as const).map((l) => {
-              const active = lang === l;
-              return (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-1.5 py-0.5 border transition-all duration-200 font-sans text-[11px] uppercase tracking-wider cursor-pointer ${
-                    active
-                      ? 'border-zinc-500 text-white font-medium bg-zinc-800/60'
-                      : 'border-transparent text-zinc-400 hover:text-white'
-                  }`}
-                >
-                  {l}
-                </button>
-              );
-            })}
-          </div>
+        <div className="flex md:hidden items-center">
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => setMobileMenuOpen(true)}
             className="text-zinc-200 p-2 focus:outline-none cursor-pointer"
-            aria-label="Toggle Menu"
+            aria-label="Abrir menú"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <Menu size={26} />
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu with AnimatePresence */}
+      {/* Mobile Right-Side Slide-In Drawer */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden overflow-hidden bg-[#121215] border-b border-zinc-800 px-6 py-6 font-sans text-xs uppercase tracking-widest"
-          >
-            <div className="space-y-3">
-              {navLinks.map((link, i) =>
-                link.route ? (
-                  <MotionLink
-                    key={link.href}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 + 0.1, duration: 0.25 }}
-                    to={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2 text-zinc-200 hover:text-white border-b border-zinc-800/50"
-                  >
-                    {link.label}
-                  </MotionLink>
-                ) : (
-                  <motion.a
-                    key={link.href}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 + 0.1, duration: 0.25 }}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2 text-zinc-200 hover:text-white border-b border-zinc-800/50"
-                  >
-                    {link.label}
-                  </motion.a>
-                )
-              )}
-              <motion.button
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.25 }}
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenBooking();
-                }}
-                className="w-full mt-4 bg-zinc-100 text-zinc-950 py-3 font-sans text-xs uppercase tracking-widest font-medium text-center cursor-pointer"
-              >
-                {t.bookNow}
-              </motion.button>
-            </div>
-          </motion.div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="md:hidden fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
+            />
+
+            {/* Panel */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="md:hidden fixed top-0 right-0 z-50 h-dvh w-[85%] max-w-sm bg-[#0c0c0e] border-l border-zinc-800 shadow-2xl flex flex-col"
+            >
+              <div className="flex items-center justify-between px-6 py-5 border-b border-zinc-800">
+                <div className="flex items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">
+                  {(['es', 'en', 'por'] as const).map((l) => {
+                    const active = lang === l;
+                    return (
+                      <button
+                        key={l}
+                        onClick={() => setLang(l)}
+                        className={`px-2 py-1 border transition-all duration-200 font-sans text-xs uppercase tracking-widest cursor-pointer ${
+                          active
+                            ? 'border-zinc-500 text-white font-medium bg-zinc-800/60'
+                            : 'border-transparent text-zinc-400 hover:text-white'
+                        }`}
+                      >
+                        {l}
+                      </button>
+                    );
+                  })}
+                </div>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-zinc-200 p-2 -mr-2 focus:outline-none cursor-pointer"
+                  aria-label="Cerrar menú"
+                >
+                  <X size={26} />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto px-6 py-8 flex flex-col gap-2">
+                {navLinks.map((link, i) => {
+                  const content = (
+                    <motion.span
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.06 + 0.15, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      className="block font-serif text-3xl sm:text-4xl font-light text-zinc-100 hover:text-white transition-colors py-2.5"
+                    >
+                      {link.label}
+                    </motion.span>
+                  );
+                  return link.route ? (
+                    <Link key={link.href} to={link.href} onClick={() => setMobileMenuOpen(false)}>
+                      {content}
+                    </Link>
+                  ) : (
+                    <a key={link.href} href={link.href} onClick={() => setMobileMenuOpen(false)}>
+                      {content}
+                    </a>
+                  );
+                })}
+              </div>
+
+              <div className="px-6 py-6 border-t border-zinc-800">
+                <motion.button
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35, duration: 0.3 }}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenBooking();
+                  }}
+                  className="w-full bg-zinc-100 text-zinc-950 py-4 font-sans text-sm uppercase tracking-widest font-medium text-center cursor-pointer hover:bg-white transition-colors"
+                >
+                  {t.bookNow}
+                </motion.button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>
