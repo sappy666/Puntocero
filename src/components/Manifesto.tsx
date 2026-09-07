@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Language, translations } from '../translations';
+import { renderWithHighlights } from './TextHighlight';
 
 interface ManifestoProps {
   lang: Language;
@@ -28,10 +29,12 @@ export const Manifesto: React.FC<ManifestoProps> = ({ lang }) => {
               {t.lead}
             </h2>
           </div>
-          <div className="space-y-6 text-zinc-300 text-base sm:text-lg font-light leading-relaxed">
-            <p>{t.p1}</p>
-            <p>{t.p2}</p>
-            <p>{t.p3}</p>
+          <div className="space-y-6 text-zinc-300 text-base sm:text-lg font-light leading-relaxed sm:leading-loose">
+            <p className="first-letter:font-serif first-letter:text-6xl sm:first-letter:text-7xl first-letter:text-white first-letter:font-light first-letter:float-left first-letter:leading-[0.8] first-letter:pr-3 first-letter:pt-1.5">
+              {renderWithHighlights(t.p1, t.highlights)}
+            </p>
+            <p>{renderWithHighlights(t.p2, t.highlights)}</p>
+            <p>{renderWithHighlights(t.p3, t.highlights)}</p>
           </div>
         </motion.div>
 

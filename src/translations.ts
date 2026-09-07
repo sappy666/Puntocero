@@ -28,6 +28,7 @@ export const translations = {
       p1: 'Ubicado a orillas del Lago General Carrera, en el corazón de la Patagonia chilena, Punto Cero es un lugar donde la arquitectura, la naturaleza y las experiencias significativas se encuentran.',
       p2: 'Rodeado de imponentes montañas, bosques milenarios y aguas cristalinas, cada día invita a explorar uno de los últimos paisajes verdaderamente vírgenes del mundo. Descubre las Capillas de Mármol, navega en kayak por lagos glaciales, recorre valles remotos o simplemente contempla el silencio desde tu refugio privado.',
       p3: 'Aquí, el tiempo se detiene. El lujo se encuentra en la simplicidad. Y cada momento se convierte en una oportunidad para reconectar con lo que verdaderamente importa.',
+      highlights: ['experiencias significativas', 'Capillas de Mármol', 'El lujo se encuentra en la simplicidad'],
     },
     originPause: {
       title: 'VOLVER AL ORIGEN',
@@ -405,6 +406,7 @@ export const translations = {
       p1: 'Nestled on the shores of Lake General Carrera, in the heart of Chilean Patagonia, Punto Cero is a place where architecture, nature and meaningful experiences come together.',
       p2: 'Surrounded by towering mountains, ancient forests and crystal-clear waters, every day invites you to explore one of the world’s last truly untouched landscapes. Discover the Marble Caves, kayak across glacial lakes, hike remote valleys or simply embrace the silence from your private retreat.',
       p3: 'Here, time slows down. Luxury is found in simplicity. And every moment becomes an opportunity to reconnect with what truly matters.',
+      highlights: ['meaningful experiences', 'Marble Caves', 'Luxury is found in simplicity'],
     },
     originPause: {
       title: 'VOLVER AL ORIGEN',
@@ -782,6 +784,7 @@ export const translations = {
       p1: 'Localizado às margens do Lago General Carrera, no coração da Patagônia chilena, Punto Cero é um lugar onde a arquitetura, a natureza e experiências significativas se encontram.',
       p2: 'Cercado por montanhas imponentes, florestas milenares e águas cristalinas, cada dia convida a explorar uma das últimas paisagens verdadeiramente intocadas do mundo. Descubra as Capelas de Mármore, navegue de caiaque por lagos glaciais, caminhe por vales remotos ou simplesmente contemple o silêncio do seu refúgio privativo.',
       p3: 'Aqui, o tempo desacelera. O luxo está na simplicidade. E cada momento se torna uma oportunidade para se reconectar com o que verdadeiramente importa.',
+      highlights: ['experiências significativas', 'Capelas de Mármore', 'O luxo está na simplicidade'],
     },
     originPause: {
       title: 'VOLVER AL ORIGEN',
