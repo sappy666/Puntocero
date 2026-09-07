@@ -53,8 +53,28 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
           <Logo />
         </Link>
 
-        {/* Hamburger Toggle — shown at every breakpoint */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-5">
+          {/* Language Selector — visible on tablet & desktop, outside the menu */}
+          <div className="hidden md:flex items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">
+            {(['es', 'en', 'por'] as const).map((l) => {
+              const active = lang === l;
+              return (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  className={`px-2 py-1 border transition-all duration-200 font-sans text-xs uppercase tracking-widest cursor-pointer ${
+                    active
+                      ? 'border-zinc-500 text-white font-medium bg-zinc-800/60'
+                      : 'border-transparent text-zinc-400 hover:text-white'
+                  }`}
+                >
+                  {l}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Hamburger Toggle — shown at every breakpoint */}
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="text-zinc-200 p-2 focus:outline-none cursor-pointer"
@@ -88,7 +108,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
               className="fixed top-0 right-0 z-50 h-dvh w-[85%] max-w-sm bg-[#0c0c0e] border-l border-zinc-800 shadow-2xl flex flex-col"
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-zinc-800">
-                <div className="flex items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">
+                {/* Language Selector — mobile only; tablet & desktop show it in the top bar instead */}
+                <div className="flex md:hidden items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">
                   {(['es', 'en', 'por'] as const).map((l) => {
                     const active = lang === l;
                     return (
@@ -108,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-zinc-200 p-2 -mr-2 focus:outline-none cursor-pointer"
+                  className="text-zinc-200 p-2 -mr-2 focus:outline-none cursor-pointer md:ml-auto"
                   aria-label="Cerrar menú"
                 >
                   <X size={26} />
