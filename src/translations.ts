@@ -40,7 +40,7 @@ export const translations = {
       architectName: 'Tomás Villalón Arquitectos',
       photographyName: 'Roland Halbe Photography',
       portfolioUrl: 'https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/',
-      portfolioLabel: 'Ver Publicación y Portfolio de Roland Halbe',
+      portfolioLabel: 'Ver toda la galería',
       p1: 'Construida sobre la pronunciada pendiente de Bahía Murta, frente a la inmensidad del Lago General Carrera, la residencia se concibe como un prisma sobrio de madera de Lenga que flota suavemente sobre el terreno natural.',
       p2: 'Su volumen abierto se organiza en función de la luz austral y las vistas panorámicas hacia las cumbres y el agua glacial, permitiendo una inmersión contemplativa donde la arquitectura actúa como marco del paisaje.',
       specs: [
@@ -358,7 +358,7 @@ export const translations = {
       architectName: 'Tomás Villalón Arquitectos',
       photographyName: 'Roland Halbe Photography',
       portfolioUrl: 'https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/',
-      portfolioLabel: 'View Publication & Portfolio by Roland Halbe',
+      portfolioLabel: 'View Full Gallery',
       p1: 'Built along the steep slope of Bahía Murta facing Lake General Carrera, the residence is conceived as a sober Lenga timber prism resting gracefully over the natural topography.',
       p2: 'Its open volume maximizes southern light and panoramic views of snow-capped peaks and glacial waters, creating a contemplative sanctuary where architecture acts as a refined lens for nature.',
       specs: [
@@ -676,7 +676,7 @@ export const translations = {
       architectName: 'Tomás Villalón Arquitectos',
       photographyName: 'Roland Halbe Photography',
       portfolioUrl: 'https://rolandhalbe.eu/portfolio/casa-bahia-murta-by-tomas-villalon/',
-      portfolioLabel: 'Ver Publicação e Portfólio de Roland Halbe',
+      portfolioLabel: 'Ver Galeria Completa',
       p1: 'Construída sobre a acentuada inclinação de Bahía Murta, em frente ao majestoso Lago General Carrera, a residência se concebe como um prisma sóbrio em madeira de Lenga.',
       p2: 'Seu volume aberto organiza-se em função da luz austral e das vistas panorâmicas das montanhas e das águas glaciais, permitindo uma imersão contemplativa pura.',
       specs: [
