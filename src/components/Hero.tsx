@@ -31,10 +31,11 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
           preload="auto"
           fetchPriority="high"
           aria-hidden="true"
-          poster="https://lh3.googleusercontent.com/aida-public/AB6AXuASbR5EYy_4r3BvSM7-7YyaagCXDZc2UpsQiHBrO_HWK_TcU0vz9gz3i5kcaDahcVQvu_UQ0sKVDYvmkVZBNDqgJkCWZ9vL2lz1pTqbYTstVO6_TxHGaTqk6a6OalRKNH0bxkfkFinKJcdf9l7IRaIZTFilxiz0SQnr3arOh3mh0gmg88ASULmfnA8CLEM_YUfGNLMRUBpvK2HrtjIYQud3dQtDmnCFF5VcLK-s-fAnCld39lTkx62AWfK3SRe_Udiyxw"
+          referrerPolicy="no-referrer"
+          poster="https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-01-scaled.webp"
           className="w-full h-full object-cover scale-100"
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-mountain-lake-and-snow-capped-peaks-in-patagonia-41582-large.mp4" type="video/mp4" />
+          <source src="https://www.puntoceropatagonia.com/wp-content/uploads/2025/08/Banner-365-video-horizontal-prueba.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-[#0c0c0e]/60 to-black/50" />
       </div>

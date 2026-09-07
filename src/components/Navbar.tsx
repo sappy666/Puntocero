@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Language, translations } from '../translations';
 import { Logo } from './Logo';
+
+const MotionLink = motion.create(Link);
 
 interface NavbarProps {
   lang: Language;
@@ -24,11 +27,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: '#features', label: t.features },
-    { href: '#attractions', label: t.attractions },
-    { href: '#map', label: t.map },
-    { href: '#contact', label: t.contact },
+  const navLinks: { href: string; label: string; route?: boolean }[] = [
+    { href: '/#features', label: t.features },
+    { href: '/galeria', label: t.gallery, route: true },
+    { href: '/#attractions', label: t.attractions },
+    { href: '/#map', label: t.map },
+    { href: '/#contact', label: t.contact },
   ];
 
   return (
@@ -42,37 +46,41 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center">
         {/* Brand Logo */}
-        <a
-          href="#"
+        <Link
+          to="/"
           className="hover:opacity-90 transition-opacity duration-300 py-1"
           aria-label="Punto Cero Patagonia"
         >
           <Logo />
-        </a>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-8 text-zinc-400 font-sans text-xs uppercase tracking-widest font-normal">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onMouseEnter={() => setHoveredLink(link.href)}
-              onMouseLeave={() => setHoveredLink(null)}
-              className="hover:text-white transition-colors duration-200 relative py-1"
-            >
-              <span>{link.label}</span>
-              {hoveredLink === link.href && (
-                <motion.span
-                  layoutId="navUnderline"
-                  initial={{ opacity: 0, scaleX: 0 }}
-                  animate={{ opacity: 1, scaleX: 1 }}
-                  exit={{ opacity: 0, scaleX: 0 }}
-                  transition={{ duration: 0.2, ease: 'easeOut' }}
-                  className="absolute bottom-0 left-0 right-0 h-[1px] bg-white origin-left"
-                />
-              )}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const LinkTag: any = link.route ? Link : 'a';
+            const linkProp = link.route ? { to: link.href } : { href: link.href };
+            return (
+              <LinkTag
+                key={link.href}
+                {...linkProp}
+                onMouseEnter={() => setHoveredLink(link.href)}
+                onMouseLeave={() => setHoveredLink(null)}
+                className="hover:text-white transition-colors duration-200 relative py-1"
+              >
+                <span>{link.label}</span>
+                {hoveredLink === link.href && (
+                  <motion.span
+                    layoutId="navUnderline"
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    exit={{ opacity: 0, scaleX: 0 }}
+                    transition={{ duration: 0.2, ease: 'easeOut' }}
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-white origin-left"
+                  />
+                )}
+              </LinkTag>
+            );
+          })}
         </div>
 
         {/* Right CTA & Language Selector */}
@@ -147,19 +155,33 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
             className="md:hidden overflow-hidden bg-[#121215] border-b border-zinc-800 px-6 py-6 font-sans text-xs uppercase tracking-widest"
           >
             <div className="space-y-3">
-              {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.href}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 + 0.1, duration: 0.25 }}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-zinc-200 hover:text-white border-b border-zinc-800/50"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+              {navLinks.map((link, i) =>
+                link.route ? (
+                  <MotionLink
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 + 0.1, duration: 0.25 }}
+                    to={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2 text-zinc-200 hover:text-white border-b border-zinc-800/50"
+                  >
+                    {link.label}
+                  </MotionLink>
+                ) : (
+                  <motion.a
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 + 0.1, duration: 0.25 }}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2 text-zinc-200 hover:text-white border-b border-zinc-800/50"
+                  >
+                    {link.label}
+                  </motion.a>
+                )
+              )}
               <motion.button
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -82,6 +82,64 @@ export const translations = {
         },
       ],
     },
+    galleryPage: {
+      tag: '04 // GALERÍA COMPLETA',
+      title: 'Casa Bahía Murta',
+      subtitle: 'Un recorrido fotográfico por la arquitectura, el paisaje y la luz de Bahía Murta.',
+      backLabel: 'Volver al inicio',
+      photos: [
+        {
+          id: 'g01',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-01-scaled.webp',
+          alt: 'Vista exterior de Casa Bahía Murta al atardecer sobre el valle',
+        },
+        {
+          id: 'g27',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-27-scaled.webp',
+          alt: 'Vista panorámica de Casa Bahía Murta y el valle de Bahía Murta',
+        },
+        {
+          id: 'g19',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-19-scaled.webp',
+          alt: 'Fachada curva de Casa Bahía Murta integrada a la ladera',
+        },
+        {
+          id: 'g32',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-32-scaled.webp',
+          alt: 'Casa Bahía Murta asomando entre el bosque nativo de lenga',
+        },
+        {
+          id: 'g16',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-16-scaled.webp',
+          alt: 'Casa Bahía Murta al atardecer sobre el Lago General Carrera',
+        },
+        {
+          id: 'g12',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-12-scaled.webp',
+          alt: 'Vista distante de Casa Bahía Murta entre los cerros de Bahía Murta',
+        },
+        {
+          id: 'g11',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-11-scaled.webp',
+          alt: 'Detalle de fachada y ventanales de Casa Bahía Murta',
+        },
+        {
+          id: 'g08',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-08-scaled.webp',
+          alt: 'Casa Bahía Murta enmarcada por el bosque patagónico',
+        },
+        {
+          id: 'g06',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-06-scaled.webp',
+          alt: 'Vista aérea de Casa Bahía Murta en el valle de Bahía Murta',
+        },
+        {
+          id: 'g07',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-07-scaled.webp',
+          alt: 'Casa Bahía Murta vista desde la ladera de la montaña',
+        },
+      ],
+    },
     amenities: {
       title: 'El Refugio',
       subtitle: 'Comodidad absoluta en el fin del mundo.',
@@ -400,6 +458,64 @@ export const translations = {
         },
       ],
     },
+    galleryPage: {
+      tag: '04 // FULL GALLERY',
+      title: 'Casa Bahía Murta',
+      subtitle: 'A photographic journey through the architecture, landscape, and light of Bahía Murta.',
+      backLabel: 'Back to home',
+      photos: [
+        {
+          id: 'g01',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-01-scaled.webp',
+          alt: 'Exterior view of Casa Bahía Murta at sunset over the valley',
+        },
+        {
+          id: 'g27',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-27-scaled.webp',
+          alt: 'Panoramic view of Casa Bahía Murta and the Bahía Murta valley',
+        },
+        {
+          id: 'g19',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-19-scaled.webp',
+          alt: 'Curved facade of Casa Bahía Murta set into the hillside',
+        },
+        {
+          id: 'g32',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-32-scaled.webp',
+          alt: 'Casa Bahía Murta glimpsed through native lenga forest',
+        },
+        {
+          id: 'g16',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-16-scaled.webp',
+          alt: 'Casa Bahía Murta at dusk over Lake General Carrera',
+        },
+        {
+          id: 'g12',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-12-scaled.webp',
+          alt: 'Distant view of Casa Bahía Murta among the hills of Bahía Murta',
+        },
+        {
+          id: 'g11',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-11-scaled.webp',
+          alt: 'Facade and window detail of Casa Bahía Murta',
+        },
+        {
+          id: 'g08',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-08-scaled.webp',
+          alt: 'Casa Bahía Murta framed by the Patagonian forest',
+        },
+        {
+          id: 'g06',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-06-scaled.webp',
+          alt: 'Aerial view of Casa Bahía Murta in the valley',
+        },
+        {
+          id: 'g07',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-07-scaled.webp',
+          alt: 'Casa Bahía Murta seen from the mountainside',
+        },
+      ],
+    },
     amenities: {
       title: 'The Sanctuary',
       subtitle: 'Absolute comfort at the end of the world.',
@@ -715,6 +831,64 @@ export const translations = {
           desc: 'Imersão total de 5+ dias. Detalhes personalizados do início ao fim da aventura, com guias privados e logística exclusiva.',
           cta: 'SOLICITAR PROPOSTA',
           image: 'https://images.unsplash.com/photo-1565626571703-65f9128c1050?q=80&w=1200&auto=format&fit=crop',
+        },
+      ],
+    },
+    galleryPage: {
+      tag: '04 // GALERIA COMPLETA',
+      title: 'Casa Bahía Murta',
+      subtitle: 'Um percurso fotográfico pela arquitetura, a paisagem e a luz de Bahía Murta.',
+      backLabel: 'Voltar ao início',
+      photos: [
+        {
+          id: 'g01',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-01-scaled.webp',
+          alt: 'Vista exterior de Casa Bahía Murta ao entardecer sobre o vale',
+        },
+        {
+          id: 'g27',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-27-scaled.webp',
+          alt: 'Vista panorâmica de Casa Bahía Murta e o vale de Bahía Murta',
+        },
+        {
+          id: 'g19',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-19-scaled.webp',
+          alt: 'Fachada curva de Casa Bahía Murta integrada à encosta',
+        },
+        {
+          id: 'g32',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-32-scaled.webp',
+          alt: 'Casa Bahía Murta entre a floresta nativa de lenga',
+        },
+        {
+          id: 'g16',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-16-scaled.webp',
+          alt: 'Casa Bahía Murta ao entardecer sobre o Lago General Carrera',
+        },
+        {
+          id: 'g12',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-12-scaled.webp',
+          alt: 'Vista distante de Casa Bahía Murta entre as colinas de Bahía Murta',
+        },
+        {
+          id: 'g11',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-11-scaled.webp',
+          alt: 'Detalhe da fachada e das janelas de Casa Bahía Murta',
+        },
+        {
+          id: 'g08',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-08-scaled.webp',
+          alt: 'Casa Bahía Murta emoldurada pela floresta patagônica',
+        },
+        {
+          id: 'g06',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-06-scaled.webp',
+          alt: 'Vista aérea de Casa Bahía Murta no vale',
+        },
+        {
+          id: 'g07',
+          src: 'https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-07-scaled.webp',
+          alt: 'Casa Bahía Murta vista da encosta da montanha',
         },
       ],
     },
