@@ -66,7 +66,7 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
               referrerPolicy="no-referrer"
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
+              className="w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
             />
           </div>
 
@@ -79,7 +79,7 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
+                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
               />
             </div>
 
@@ -90,7 +90,7 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
+                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
               />
             </div>
           </div>

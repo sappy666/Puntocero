@@ -44,11 +44,12 @@ export const Manifesto: React.FC<ManifestoProps> = ({ lang }) => {
           className="lg:col-span-7 overflow-hidden border border-zinc-800 transition-all duration-300 group cursor-pointer shadow-2xl"
         >
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFNL1CoMe7J5jBVolakJWVpj3gKj99oREijC7VJek1T2F4oxW9LNcdQSVRDVOR1XzYlnj7DzjwTkz-TU-H5da4KBKPPTfPXPFtWTvsXf_4xC6_PEZ4f7omgDMOcEaqH5a9l3ZpUhhA5jq1A6JEKd7SUOEfFnCIbO9BQV81DVNdjoN0Eov07SoKVlXK7l54YG5B3VYGmt8vo0dAIIXvsfSTz4FT1db9Ixu-qbb2k60gg6JrrdmYw0ZKvlW3cOAkIa7Dow"
-            alt="Interior view of Punto Cero Patagonia retreat"
+            src="https://puntoceropatagonia.com/wp-content/uploads/2026/08/casa-bahia-murta-punto-cero-patagonia-01-scaled.webp"
+            alt="Vista exterior de Casa Bahía Murta al atardecer, sobre el Lago General Carrera"
+            referrerPolicy="no-referrer"
             loading="lazy"
             decoding="async"
-            className="w-full h-auto aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 transition-all duration-500 ease-out"
+            className="w-full h-auto aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
           />
         </motion.div>
       </div>

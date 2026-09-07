@@ -26,7 +26,6 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
 
   const navLinks = [
     { href: '#features', label: t.features },
-    { href: '#gallery', label: t.gallery },
     { href: '#attractions', label: t.attractions },
     { href: '#map', label: t.map },
     { href: '#contact', label: t.contact },

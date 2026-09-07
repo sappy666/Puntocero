@@ -6,13 +6,11 @@ import { OriginPause } from './components/OriginPause';
 import { ArchitecturalRetreat } from './components/ArchitecturalRetreat';
 import { Programs } from './components/Programs';
 import { Amenities } from './components/Amenities';
-import { SpacesGallery } from './components/SpacesGallery';
 import { Attractions } from './components/Attractions';
 import { LocationMap } from './components/LocationMap';
 import { CtaBanner } from './components/CtaBanner';
 import { ContactFooter } from './components/ContactFooter';
 import { BookingModal } from './components/BookingModal';
-import { ImageLightbox } from './components/ImageLightbox';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Language } from './translations';
 
@@ -28,12 +26,6 @@ export default function App() {
     checkOut: '',
     guests: 2,
   });
-
-  const [lightboxImage, setLightboxImage] = useState<{
-    src: string;
-    title: string;
-    desc: string;
-  } | null>(null);
 
   const handleCheckAvailability = (checkIn: string, checkOut: string, guests: number) => {
     setBookingData({ checkIn, checkOut, guests });
@@ -70,12 +62,6 @@ export default function App() {
       {/* Amenities Grid */}
       <Amenities lang={lang} />
 
-      {/* Visual Spaces Gallery */}
-      <SpacesGallery
-        lang={lang}
-        onSelectImage={(img) => setLightboxImage(img)}
-      />
-
       {/* Surrounding Attractions */}
       <Attractions lang={lang} />
 
@@ -99,12 +85,6 @@ export default function App() {
         initialCheckIn={bookingData.checkIn}
         initialCheckOut={bookingData.checkOut}
         initialGuests={bookingData.guests}
-      />
-
-      {/* Full-Screen Image Lightbox */}
-      <ImageLightbox
-        image={lightboxImage}
-        onClose={() => setLightboxImage(null)}
       />
 
       {/* Floating Scroll to Top Button */}

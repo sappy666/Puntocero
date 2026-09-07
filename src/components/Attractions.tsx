@@ -72,7 +72,7 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
                   alt={current.name}
                   loading="lazy"
                   decoding="async"
-                  className="w-full aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
+                  className="w-full aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
                 />
               </div>
 
