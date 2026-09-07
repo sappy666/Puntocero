@@ -11,6 +11,31 @@ interface ArchitecturalRetreatProps {
   lang: Language;
 }
 
+// Wraps a phrase with an animated highlighter-marker sweep that triggers once in view.
+const Highlight: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <span className="relative inline whitespace-normal">
+    <motion.span
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+      className="absolute inset-x-0 bottom-[0.05em] top-[0.15em] bg-amber-500/25 origin-left -z-10"
+      style={{ transformOrigin: 'left' }}
+    />
+    <span className="text-zinc-50">{children}</span>
+  </span>
+);
+
+// Splits text on the given phrases (exact substring match) and wraps matches in <Highlight>.
+const renderWithHighlights = (text: string, phrases: string[]): React.ReactNode => {
+  if (!phrases.length) return text;
+  const escaped = phrases.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const pattern = new RegExp(`(${escaped.join('|')})`, 'g');
+  return text.split(pattern).map((part, i) =>
+    phrases.includes(part) ? <Highlight key={i}>{part}</Highlight> : part
+  );
+};
+
 export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang }) => {
   const t = translations[lang].architecturalRetreat;
 
@@ -104,9 +129,11 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-2 items-start"
         >
-          <div className="lg:col-span-7 space-y-4 text-zinc-300 text-sm font-light leading-relaxed">
-            <p>{t.p1}</p>
-            <p>{t.p2}</p>
+          <div className="lg:col-span-7 space-y-6 text-zinc-300 text-base sm:text-lg font-light leading-relaxed sm:leading-loose">
+            <p className="first-letter:font-serif first-letter:text-6xl sm:first-letter:text-7xl first-letter:text-white first-letter:font-light first-letter:float-left first-letter:leading-[0.8] first-letter:pr-3 first-letter:pt-1.5">
+              {renderWithHighlights(t.p1, t.highlights)}
+            </p>
+            <p>{renderWithHighlights(t.p2, t.highlights)}</p>
           </div>
 
           {/* Technical Spec Sheet */}

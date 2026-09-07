@@ -16,7 +16,6 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const t = translations[lang].nav;
 
   useEffect(() => {
@@ -54,68 +53,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
           <Logo />
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-zinc-400 font-sans text-xs uppercase tracking-widest font-normal">
-          {navLinks.map((link) => {
-            const LinkTag: any = link.route ? Link : 'a';
-            const linkProp = link.route ? { to: link.href } : { href: link.href };
-            return (
-              <LinkTag
-                key={link.href}
-                {...linkProp}
-                onMouseEnter={() => setHoveredLink(link.href)}
-                onMouseLeave={() => setHoveredLink(null)}
-                className="hover:text-white transition-colors duration-200 relative py-1"
-              >
-                <span>{link.label}</span>
-                {hoveredLink === link.href && (
-                  <motion.span
-                    layoutId="navUnderline"
-                    initial={{ opacity: 0, scaleX: 0 }}
-                    animate={{ opacity: 1, scaleX: 1 }}
-                    exit={{ opacity: 0, scaleX: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-white origin-left"
-                  />
-                )}
-              </LinkTag>
-            );
-          })}
-        </div>
-
-        {/* Right CTA & Language Selector */}
-        <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">
-            {(['es', 'en', 'por'] as const).map((l) => {
-              const active = lang === l;
-              return (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-2 py-1 border transition-all duration-200 font-sans text-xs uppercase tracking-widest cursor-pointer ${
-                    active
-                      ? 'border-zinc-500 text-white font-medium bg-zinc-800/60'
-                      : 'border-transparent text-zinc-400 hover:text-white'
-                  }`}
-                >
-                  {l}
-                </button>
-              );
-            })}
-          </div>
-
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={onOpenBooking}
-            className="bg-zinc-100 text-zinc-950 px-5 py-2.5 font-sans text-xs uppercase tracking-widest font-medium hover:bg-white transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
-          >
-            {t.bookNow}
-          </motion.button>
-        </div>
-
-        {/* Mobile Hamburger Toggle */}
-        <div className="flex md:hidden items-center">
+        {/* Hamburger Toggle — shown at every breakpoint */}
+        <div className="flex items-center">
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="text-zinc-200 p-2 focus:outline-none cursor-pointer"
@@ -126,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
         </div>
       </div>
 
-      {/* Mobile Right-Side Slide-In Drawer */}
+      {/* Right-Side Slide-In Drawer — shown at every breakpoint */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
@@ -137,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="md:hidden fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
+              className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
             />
 
             {/* Panel */}
@@ -146,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenBooking }) 
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="md:hidden fixed top-0 right-0 z-50 h-dvh w-[85%] max-w-sm bg-[#0c0c0e] border-l border-zinc-800 shadow-2xl flex flex-col"
+              className="fixed top-0 right-0 z-50 h-dvh w-[85%] max-w-sm bg-[#0c0c0e] border-l border-zinc-800 shadow-2xl flex flex-col"
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-zinc-800">
                 <div className="flex items-center gap-1.5 text-zinc-400 font-sans text-xs tracking-widest">

@@ -43,6 +43,7 @@ export const translations = {
       portfolioLabel: 'Ver toda la galería',
       p1: 'Construida sobre la pronunciada pendiente de Bahía Murta, frente a la inmensidad del Lago General Carrera, la residencia se concibe como un prisma sobrio de madera de Lenga que flota suavemente sobre el terreno natural.',
       p2: 'Su volumen abierto se organiza en función de la luz austral y las vistas panorámicas hacia las cumbres y el agua glacial, permitiendo una inmersión contemplativa donde la arquitectura actúa como marco del paisaje.',
+      highlights: ['madera de Lenga', 'luz austral', 'marco del paisaje'],
       specs: [
         { label: 'ARQUITECTURA', value: 'Tomás Villalón' },
         { label: 'FOTOGRAFÍA', value: 'Roland Halbe' },
@@ -419,6 +420,7 @@ export const translations = {
       portfolioLabel: 'View Full Gallery',
       p1: 'Built along the steep slope of Bahía Murta facing Lake General Carrera, the residence is conceived as a sober Lenga timber prism resting gracefully over the natural topography.',
       p2: 'Its open volume maximizes southern light and panoramic views of snow-capped peaks and glacial waters, creating a contemplative sanctuary where architecture acts as a refined lens for nature.',
+      highlights: ['Lenga timber prism', 'southern light', 'refined lens for nature'],
       specs: [
         { label: 'ARCHITECTURE', value: 'Tomás Villalón' },
         { label: 'PHOTOGRAPHY', value: 'Roland Halbe' },
@@ -795,6 +797,7 @@ export const translations = {
       portfolioLabel: 'Ver Galeria Completa',
       p1: 'Construída sobre a acentuada inclinação de Bahía Murta, em frente ao majestoso Lago General Carrera, a residência se concebe como um prisma sóbrio em madeira de Lenga.',
       p2: 'Seu volume aberto organiza-se em função da luz austral e das vistas panorâmicas das montanhas e das águas glaciais, permitindo uma imersão contemplativa pura.',
+      highlights: ['madeira de Lenga', 'luz austral', 'imersão contemplativa'],
       specs: [
         { label: 'ARQUITETURA', value: 'Tomás Villalón' },
         { label: 'FOTOGRAFIA', value: 'Roland Halbe' },
