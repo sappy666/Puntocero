@@ -50,6 +50,38 @@ export const translations = {
         { label: 'MATERIALES', value: 'Lenga, Hormigón Visto & Cristal' }
       ]
     },
+    programs: {
+      tag: 'EL REFUGIO',
+      title: 'Programas & experiencias',
+      items: [
+        {
+          id: 'essential',
+          badge: 'POPULAR',
+          duration: '3 DÍAS / 2 NOCHES',
+          name: 'Essential',
+          desc: 'Escapada soñada. El balance perfecto entre el descanso absoluto en nuestras instalaciones de diseño y experiencias guiadas de alto nivel en glaciares remotos.',
+          primaryCta: 'RESERVAR AHORA',
+          secondaryCta: 'VER DETALLES',
+          image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
+        },
+        {
+          id: 'riding-solo',
+          badge: 'PRIVADO',
+          name: 'Riding Solo',
+          desc: 'Libertad total y privacidad. Para el viajero independiente que busca descubrir a su propio ritmo los secretos de la Patagonia.',
+          cta: 'RESERVAR',
+          image: 'https://images.unsplash.com/photo-1585424562422-29383a793245?q=80&w=1200&auto=format&fit=crop',
+        },
+        {
+          id: 'expedition',
+          badge: 'LUJO',
+          name: 'Expedition',
+          desc: 'Inmersión total de 5+ días. Detalles personalizados desde el inicio hasta el fin de la aventura, con guías privados y logística exclusiva.',
+          cta: 'SOLICITAR PROPUESTA',
+          image: 'https://images.unsplash.com/photo-1565626571703-65f9128c1050?q=80&w=1200&auto=format&fit=crop',
+        },
+      ],
+    },
     amenities: {
       title: 'El Refugio',
       subtitle: 'Comodidad absoluta en el fin del mundo.',
@@ -301,6 +333,38 @@ export const translations = {
         { label: 'MATERIALS', value: 'Native Lenga, Concrete & Glass' }
       ]
     },
+    programs: {
+      tag: 'THE SANCTUARY',
+      title: 'Programs & Experiences',
+      items: [
+        {
+          id: 'essential',
+          badge: 'POPULAR',
+          duration: '3 DAYS / 2 NIGHTS',
+          name: 'Essential',
+          desc: 'A dream escape. The perfect balance between absolute rest at our design retreat and high-level guided experiences across remote glaciers.',
+          primaryCta: 'BOOK NOW',
+          secondaryCta: 'VIEW DETAILS',
+          image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
+        },
+        {
+          id: 'riding-solo',
+          badge: 'PRIVATE',
+          name: 'Riding Solo',
+          desc: 'Total freedom and privacy. For the independent traveler seeking to discover the secrets of Patagonia at their own pace.',
+          cta: 'BOOK',
+          image: 'https://images.unsplash.com/photo-1585424562422-29383a793245?q=80&w=1200&auto=format&fit=crop',
+        },
+        {
+          id: 'expedition',
+          badge: 'LUXURY',
+          name: 'Expedition',
+          desc: 'A full 5+ day immersion. Personalized details from start to finish, with private guides and exclusive logistics.',
+          cta: 'REQUEST PROPOSAL',
+          image: 'https://images.unsplash.com/photo-1565626571703-65f9128c1050?q=80&w=1200&auto=format&fit=crop',
+        },
+      ],
+    },
     amenities: {
       title: 'The Sanctuary',
       subtitle: 'Absolute comfort at the end of the world.',
@@ -551,6 +615,38 @@ export const translations = {
         { label: 'LOCALIZAÇÃO', value: 'Bahía Murta, Patagônia, Chile' },
         { label: 'MATERIAIS', value: 'Madeira de Lenga, Concreto & Vidro' }
       ]
+    },
+    programs: {
+      tag: 'O REFÚGIO',
+      title: 'Programas & experiências',
+      items: [
+        {
+          id: 'essential',
+          badge: 'POPULAR',
+          duration: '3 DIAS / 2 NOITES',
+          name: 'Essential',
+          desc: 'Uma escapada dos sonhos. O equilíbrio perfeito entre o descanso absoluto em nossas instalações de design e experiências guiadas de alto nível em geleiras remotas.',
+          primaryCta: 'RESERVAR AGORA',
+          secondaryCta: 'VER DETALHES',
+          image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
+        },
+        {
+          id: 'riding-solo',
+          badge: 'PRIVADO',
+          name: 'Riding Solo',
+          desc: 'Liberdade total e privacidade. Para o viajante independente que busca descobrir os segredos da Patagônia em seu próprio ritmo.',
+          cta: 'RESERVAR',
+          image: 'https://images.unsplash.com/photo-1585424562422-29383a793245?q=80&w=1200&auto=format&fit=crop',
+        },
+        {
+          id: 'expedition',
+          badge: 'LUXO',
+          name: 'Expedition',
+          desc: 'Imersão total de 5+ dias. Detalhes personalizados do início ao fim da aventura, com guias privados e logística exclusiva.',
+          cta: 'SOLICITAR PROPOSTA',
+          image: 'https://images.unsplash.com/photo-1565626571703-65f9128c1050?q=80&w=1200&auto=format&fit=crop',
+        },
+      ],
     },
     amenities: {
       title: 'O Refúgio',

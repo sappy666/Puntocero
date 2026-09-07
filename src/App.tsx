@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Manifesto } from './components/Manifesto';
 import { OriginPause } from './components/OriginPause';
 import { ArchitecturalRetreat } from './components/ArchitecturalRetreat';
+import { Programs } from './components/Programs';
 import { Amenities } from './components/Amenities';
 import { SpacesGallery } from './components/SpacesGallery';
 import { Attractions } from './components/Attractions';
@@ -62,6 +63,9 @@ export default function App() {
 
       {/* Architectural Retreat Section */}
       <ArchitecturalRetreat lang={lang} />
+
+      {/* Programs & Experiences */}
+      <Programs lang={lang} onOpenBooking={() => setIsBookingOpen(true)} />
 
       {/* Amenities Grid */}
       <Amenities lang={lang} />
