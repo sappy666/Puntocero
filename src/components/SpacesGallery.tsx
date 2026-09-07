@@ -64,6 +64,8 @@ export const SpacesGallery: React.FC<SpacesGalleryProps> = ({ lang, onSelectImag
                     <img
                       src={space.image}
                       alt={space.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />

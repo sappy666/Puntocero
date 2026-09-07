@@ -64,6 +64,8 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
               src={mainExtPhoto}
               alt="Casa Bahía Murta por Tomás Villalón"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/90 via-transparent to-transparent" />
@@ -82,6 +84,8 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
                 src={livingPhoto}
                 alt="Living interior Casa Bahía Murta"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/80 via-transparent to-transparent" />
@@ -95,6 +99,8 @@ export const ArchitecturalRetreat: React.FC<ArchitecturalRetreatProps> = ({ lang
                 src={bedroomPhoto}
                 alt="Dormitorio con vistas al Lago General Carrera"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e]/80 via-transparent to-transparent" />

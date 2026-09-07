@@ -22,7 +22,10 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ lang, onOpenBooking }) => 
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFNL1CoMe7J5jBVolakJWVpj3gKj99oREijC7VJek1T2F4oxW9LNcdQSVRDVOR1XzYlnj7DzjwTkz-TU-H5da4KBKPPTfPXPFtWTvsXf_4xC6_PEZ4f7omgDMOcEaqH5a9l3ZpUhhA5jq1A6JEKd7SUOEfFnCIbO9BQV81DVNdjoN0Eov07SoKVlXK7l54YG5B3VYGmt8vo0dAIIXvsfSTz4FT1db9Ixu-qbb2k60gg6JrrdmYw0ZKvlW3cOAkIa7Dow"
-          alt="Punto Cero Patagonia CTA"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover grayscale opacity-15 transition-opacity duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0e] via-[#0c0c0e]/90 to-[#0c0c0e]/95" />

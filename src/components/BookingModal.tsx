@@ -30,6 +30,15 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  React.useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   // Calculate nights
@@ -53,11 +62,17 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="booking-modal-title"
+    >
       <div className="bg-[#121215] border border-zinc-800 max-w-lg w-full p-6 sm:p-8 relative text-zinc-200 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
+          aria-label={t.close}
           className="absolute top-4 right-4 text-zinc-400 hover:text-white p-2 focus:outline-none cursor-pointer"
         >
           <X size={20} />
@@ -68,7 +83,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             <div className="w-14 h-14 bg-zinc-800 text-white rounded-full flex items-center justify-center mx-auto border border-zinc-700">
               <CheckCircle size={30} />
             </div>
-            <h3 className="font-serif text-2xl font-light text-white">
+            <h3 id="booking-modal-title" className="font-serif text-2xl font-light text-white">
               {t.bookingTitle}
             </h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
@@ -91,7 +106,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           <div>
             <div className="mb-6 pb-4 border-b border-zinc-800">
               <span className="font-sans text-[11px] uppercase tracking-widest text-zinc-400">Punto Cero Patagonia</span>
-              <h3 className="font-serif text-2xl font-light text-white mt-1">
+              <h3 id="booking-modal-title" className="font-serif text-2xl font-light text-white mt-1">
                 {t.bookingTitle}
               </h3>
             </div>

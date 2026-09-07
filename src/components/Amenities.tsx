@@ -43,9 +43,9 @@ export const Amenities: React.FC<AmenitiesProps> = ({ lang }) => {
           <span className="font-sans text-xs uppercase tracking-[0.25em] text-zinc-400 font-medium block">
             {t.title}
           </span>
-          <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight">
             {t.subtitle}
-          </h3>
+          </h2>
         </div>
 
         {/* Spacious Amenities Grid - 3 cols max on desktop so each item gets ample width without truncation */}

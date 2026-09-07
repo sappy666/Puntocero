@@ -24,6 +24,8 @@ export const Attractions: React.FC<AttractionsProps> = ({ lang }) => {
           <img
             src={t.image}
             alt={t.title}
+            loading="lazy"
+            decoding="async"
             className="w-full aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-300"
           />
         </motion.div>

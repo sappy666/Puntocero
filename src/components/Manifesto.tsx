@@ -46,6 +46,8 @@ export const Manifesto: React.FC<ManifestoProps> = ({ lang }) => {
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFNL1CoMe7J5jBVolakJWVpj3gKj99oREijC7VJek1T2F4oxW9LNcdQSVRDVOR1XzYlnj7DzjwTkz-TU-H5da4KBKPPTfPXPFtWTvsXf_4xC6_PEZ4f7omgDMOcEaqH5a9l3ZpUhhA5jq1A6JEKd7SUOEfFnCIbO9BQV81DVNdjoN0Eov07SoKVlXK7l54YG5B3VYGmt8vo0dAIIXvsfSTz4FT1db9Ixu-qbb2k60gg6JrrdmYw0ZKvlW3cOAkIa7Dow"
             alt="Interior view of Punto Cero Patagonia retreat"
+            loading="lazy"
+            decoding="async"
             className="w-full h-auto aspect-[16/11] object-cover opacity-95 group-hover:opacity-100 transition-all duration-500 ease-out"
           />
         </motion.div>

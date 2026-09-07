@@ -28,6 +28,9 @@ export const Hero: React.FC<HeroProps> = ({ lang, onCheckAvailability }) => {
           loop
           muted
           playsInline
+          preload="auto"
+          fetchPriority="high"
+          aria-hidden="true"
           poster="https://lh3.googleusercontent.com/aida-public/AB6AXuASbR5EYy_4r3BvSM7-7YyaagCXDZc2UpsQiHBrO_HWK_TcU0vz9gz3i5kcaDahcVQvu_UQ0sKVDYvmkVZBNDqgJkCWZ9vL2lz1pTqbYTstVO6_TxHGaTqk6a6OalRKNH0bxkfkFinKJcdf9l7IRaIZTFilxiz0SQnr3arOh3mh0gmg88ASULmfnA8CLEM_YUfGNLMRUBpvK2HrtjIYQud3dQtDmnCFF5VcLK-s-fAnCld39lTkx62AWfK3SRe_Udiyxw"
           className="w-full h-full object-cover scale-100"
         >
